@@ -1,0 +1,2185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bakekeep | Homemade Custom Cakes in Divulapitiya, Sri Lanka</title>
+<meta name="description" content="Homemade custom celebration cakes, cupcakes, butter cakes and brownies, baked in Divulapitiya for the day you need them. Every cake leaves with a name on it. Order on WhatsApp.">
+<meta name="theme-color" content="#0D0A0B">
+<link rel="icon" type="image/png" href="assets/brand/logo-96.png">
+<link rel="apple-touch-icon" href="assets/brand/logo-96.png">
+
+<!-- DEPLOY STEP: patch og:url and og:image with the live absolute URL before zipping -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Bakekeep | Where Every Celebration Gets Its Crown">
+<meta property="og:description" content="Homemade custom cakes, cupcakes, butter cakes and brownies, baked in Divulapitiya. Every cake leaves with a name on it.">
+<meta property="og:url" content="REPLACE_WITH_LIVE_URL">
+<meta property="og:image" content="REPLACE_WITH_LIVE_URL/assets/hero-ending.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Karla:wght@300..500&family=Space+Mono&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"The Bakekeep","description":"Homemade custom celebration cakes, cupcakes, butter cakes and brownies.","telephone":"+94723855550","address":{"@type":"PostalAddress","addressLocality":"Divulapitiya","addressCountry":"LK"},"areaServed":["Divulapitiya","Minuwangoda","Meerigama","Negombo","Ja-Ela","Gampaha"],"priceRange":"Quote on request","sameAs":["https://www.facebook.com/thebakekeep","https://www.instagram.com/thebakekeep/"]}
+</script>
+
+<style>
+/* ============================================================
+   THE BAKEKEEP
+   Palette sampled from the hero footage. Type: Fraunces / Karla
+   / Space Mono, plus Dancing Script for the piped name only.
+   ============================================================ */
+:root{
+  --canvas:#0D0A0B;
+  --canvas-2:#14100F;
+  --panel:#1A1315;
+  --panel-2:#221A19;
+  --wine:#4A0E1B;
+  --wine-lit:#7E1524;
+  --accent:#D9AA45;
+  --accent-hover:#F2D78F;
+  --accent-muted:rgba(217,170,69,.16);
+  --line:rgba(217,170,69,.20);
+  --line-strong:rgba(217,170,69,.55);
+  --text-primary:#F6ECD8;
+  --text-secondary:#B5A385;
+
+  --display:"Fraunces",Georgia,serif;
+  --body:"Karla",system-ui,sans-serif;
+  --mono:"Space Mono",ui-monospace,monospace;
+  --script:"Dancing Script",cursive;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+  --tshadow:0 1px 2px rgba(5,5,10,.95),0 3px 12px rgba(5,5,10,.78),0 10px 44px rgba(5,5,10,.8);
+  --wrap:1180px;
+  --header-h:70px;
+  --radius:3px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden;overflow-x:clip}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 10px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--canvas);color:var(--text-primary);
+  font-family:var(--body);font-weight:300;font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.1;margin:0;
+  font-variation-settings:"opsz" 100,"SOFT" 20}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--accent);color:#1a1206;
+  padding:12px 20px;font-family:var(--mono);font-size:13px}
+.skip-link:focus{left:12px;top:12px}
+
+/* ---------- the one environment layer ---------- */
+.env{position:fixed;inset:0;z-index:0;pointer-events:none}
+.env::before{content:"";position:absolute;inset:-20%;
+  background:radial-gradient(ellipse 55% 45% at 30% 25%,rgba(217,170,69,.055),transparent 60%),
+             radial-gradient(ellipse 50% 55% at 78% 72%,rgba(126,21,36,.075),transparent 62%);
+  animation:envdrift 78s var(--ease-soft) -22s infinite alternate}
+.env::after{content:"";position:absolute;inset:0;opacity:.4;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E")}
+@keyframes envdrift{from{transform:translate3d(-2%,-1.5%,0) scale(1.02)}to{transform:translate3d(2.5%,2%,0) scale(1.08)}}
+
+/* Gold dust in three depth tiers. Uniform dots read as noise; varying size,
+   brightness, speed, blur and sideways drift together is what makes it read as
+   a room with air in it. Sizes and blurs are here, the per-mote values are
+   seeded in JS so every load is identical. */
+.motes{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.mote{position:absolute;top:0;border-radius:50%;background:var(--accent);
+  animation:rise var(--dur,60s) linear var(--delay,0s) infinite;
+  will-change:transform,opacity}
+.mote.far {width:2px;height:2px}
+.mote.mid {width:3px;height:3px;filter:blur(.45px)}
+.mote.near{width:5px;height:5px;filter:blur(1.2px)}
+@keyframes rise{
+  0%  {transform:translate3d(0,106vh,0);opacity:0}
+  9%  {opacity:var(--o,.16)}
+  87% {opacity:var(--o,.16)}
+  100%{transform:translate3d(var(--dx,0px),-8vh,0);opacity:0}}
+/* fewer of them on a phone, where the screen is narrow and the GPU is smaller */
+@media (max-width:720px){.motes i:nth-of-type(2n){display:none}}
+
+/* ---------- header ---------- */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:90;height:var(--header-h);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:0 clamp(16px,4vw,40px);
+  transition:background .5s var(--ease),backdrop-filter .5s var(--ease),border-color .5s var(--ease);
+  border-bottom:1px solid transparent}
+/* the footage's lamp sits behind the logo at scroll zero, so the bar carries its own soft shade */
+.site-header::before{content:"";position:absolute;inset:0 0 -22px;pointer-events:none;z-index:-1;
+  background:linear-gradient(180deg,rgba(8,6,7,.80) 0%,rgba(8,6,7,.42) 58%,rgba(8,6,7,0) 100%);
+  transition:opacity .5s var(--ease)}
+.site-header.stuck::before{opacity:0}
+.site-header .brand,.site-header .nav{text-shadow:0 1px 3px rgba(5,4,6,.85)}
+.site-header.stuck .brand,.site-header.stuck .nav{text-shadow:none}
+.site-header.stuck{background:rgba(13,10,11,.82);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:42px;height:42px;flex:none;
+  filter:drop-shadow(0 2px 6px rgba(5,4,6,.8))}
+.brand b{font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:.01em;
+  font-variation-settings:"opsz" 100}
+.brand i{display:block;font-family:var(--mono);font-style:normal;font-size:9.5px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--text-secondary);margin-top:1px}
+.nav{display:flex;gap:clamp(14px,2vw,28px);align-items:center}
+.nav a{font-size:13.5px;letter-spacing:.02em;text-decoration:none;color:var(--text-secondary);
+  transition:color .35s var(--ease)}
+.nav a:hover{color:var(--text-primary)}
+.nav .btn-nav{color:var(--accent);border:1px solid var(--line-strong);padding:8px 16px;border-radius:2px;
+  transition:background .35s var(--ease),color .35s var(--ease)}
+.nav .btn-nav:hover{background:var(--accent);color:#1a1206}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);border-radius:2px;
+  width:42px;height:38px;cursor:pointer;padding:0;flex-direction:column;gap:4px;
+  align-items:center;justify-content:center}
+.nav-toggle span{display:block;width:17px;height:1.5px;background:var(--accent);
+  transition:transform .4s var(--ease),opacity .3s var(--ease)}
+.nav-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.nav-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:560vh;z-index:2}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--canvas)}
+.stage .poster,.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage .poster{background-size:cover;background-position:50% 50%;transition:opacity .9s var(--ease)}
+.stage video{opacity:0;transition:opacity .9s var(--ease);will-change:transform;transform:translateZ(0)}
+.stage.video-ready video{opacity:1}
+.stage.video-ready .poster{opacity:0}
+.stage.video-failed video{display:none}
+/* Two layers, so the action lane stays bright and the text lane stays readable.
+   The linear pass dims the right column where every caption lives; the ember in
+   the footage sits there and blows out to near white without it. */
+.scrim{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(8,6,8,0) 36%,rgba(8,6,8,.40) 58%,rgba(8,6,8,.60) 78%,rgba(8,6,8,.66) 100%),
+             radial-gradient(ellipse 120% 90% at 34% 45%,rgba(10,8,10,0) 28%,rgba(10,8,10,.62) 100%)}
+
+.ring{position:absolute;right:clamp(20px,4vw,44px);bottom:clamp(20px,4vw,44px);
+  width:40px;height:40px;color:var(--accent);opacity:.85;transform:rotate(-90deg)}
+.ring circle{transition:stroke-dashoffset .25s linear}
+.stage.video-ready .ring{opacity:0;transition:opacity .6s var(--ease)}
+.chev{position:absolute;right:clamp(20px,4vw,44px);bottom:clamp(20px,4vw,44px);
+  font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--accent);opacity:.7;
+  text-transform:uppercase}
+
+/* caption bands */
+.bands{position:absolute;inset:0;pointer-events:none}
+.band{position:absolute;top:0;right:0;width:min(52%,620px);height:100%;
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-end;
+  text-align:right;padding:var(--header-h) clamp(24px,5vw,68px) 8vh 0;
+  opacity:0;text-shadow:var(--tshadow)}
+.band::before{content:"";position:absolute;inset:-8% -18% -8% -30%;pointer-events:none;z-index:-1;
+  opacity:calc(.25 + .75*var(--k,1));
+  background:radial-gradient(ellipse 88% 66% at 60% 50%,rgba(5,4,6,.86) 0%,rgba(5,4,6,.70) 44%,rgba(5,4,6,.34) 68%,rgba(5,4,6,0) 84%)}
+.band h2,.band p.lead{font-family:var(--display);font-weight:600;
+  font-size:clamp(30px,4.6vw,62px);line-height:1.06;letter-spacing:-.012em;
+  max-width:15ch;font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 1}
+.band .sub{font-size:clamp(14px,1.45vw,18px);color:var(--text-primary);opacity:.9;
+  max-width:34ch;margin-top:18px;line-height:1.55;font-weight:300}
+.band .cta-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap;justify-content:flex-end;
+  pointer-events:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* per-character / per-word choreography */
+.w{display:inline-block;white-space:pre}
+.c{display:inline-block;will-change:transform,opacity}
+.b1 .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.8,1);opacity:var(--kc);
+  transform:translateY(calc((1 - var(--kc))*-26px))}
+.b2 .c{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.6,1);opacity:var(--kc);
+  transform:translate(calc((1 - var(--kc))*var(--jx,0px)),calc((1 - var(--kc))*var(--jy,0px)))
+            rotate(calc((1 - var(--kc))*var(--jr,0deg)))}
+.b3 .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*3,1);
+  --ks:clamp(0,(var(--k,0) - var(--th,0) - var(--sd,.1))*var(--ss,3.2),1);
+  opacity:var(--kc);
+  transform:scale(calc(0.62 + (0.38 + var(--ov,.12))*var(--kc) - var(--ov,.12)*var(--ks)))}
+.b3 .w.em{--ov:.24;--sd:.16;--ss:2.6;color:var(--accent)}
+.b4 .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.9,1);opacity:var(--kc);
+  transform:translateY(calc((1 - var(--kc))*22px))}
+.b4 .sub{--ks:clamp(0,(var(--k,0) - .60)*3.6,1);opacity:var(--ks);
+  transform:translateY(calc((1 - var(--ks))*14px))}
+.b4 .cta-row{--kb:clamp(0,(var(--k,0) - .74)*4.4,1);opacity:var(--kb);
+  transform:translateY(calc((1 - var(--kb))*14px))}
+
+/* static hero. Two designed layouts, not one crop:
+   landscape overlays the text on the footage, portrait stacks the picture above
+   the words, because cover-cropping a wide frame into a tall phone throws the
+   cake off screen entirely and leaves a black rectangle. */
+.static-hero{display:none;position:relative;min-height:100svh;
+  align-items:flex-end;padding:calc(var(--header-h) + 40px) clamp(20px,6vw,56px) clamp(44px,9vw,80px)}
+.static-hero .shot{position:absolute;inset:0;background-size:cover;background-position:30% 56%}
+.static-hero .shade{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(13,10,11,.72) 0%,rgba(13,10,11,.20) 32%,rgba(13,10,11,.92) 100%)}
+/* the container is capped in px on purpose: a ch cap here would be measured in
+   the body font, not the display face inside it, and the headline breaks apart */
+.static-hero .inner{position:relative;max-width:min(560px,100%);text-shadow:var(--tshadow)}
+.static-hero h1{max-width:15ch}
+.static-hero .sub{max-width:34ch}
+
+/* a phone held sideways has almost no vertical room, so the whole block tightens */
+@media (orientation:landscape) and (max-height:560px){
+  .static-hero{padding:calc(var(--header-h) + 12px) clamp(18px,4vw,40px) 26px}
+  .static-hero h1{font-size:clamp(25px,5vw,38px)}
+  .static-hero .sub{font-size:13.5px;margin-top:10px}
+  .static-hero .cta-row{margin-top:16px}
+  .static-hero .btn{padding:10px 18px;font-size:13.5px}
+}
+
+@media (orientation:portrait){
+  .static-hero{flex-direction:column;align-items:stretch;justify-content:flex-start;padding:0}
+  .static-hero .shot{position:relative;inset:auto;width:100%;aspect-ratio:5/4;
+    background-position:27% 60%;flex:none}
+  .static-hero .shade{inset:auto 0 -1px 0;height:42%;
+    background:linear-gradient(180deg,rgba(13,10,11,0),var(--canvas) 92%)}
+  .static-hero .inner{max-width:min(620px,100%);text-shadow:none;
+    padding:6px clamp(20px,6vw,44px) clamp(46px,11vw,76px);margin-top:-6px}
+  .static-hero h1{font-size:clamp(32px,7vw,52px);max-width:15ch}
+}
+.static-hero h1{font-size:clamp(34px,9vw,58px);line-height:1.04;letter-spacing:-.015em;
+  font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 1}
+.static-hero .sub{margin-top:16px;font-size:16px;color:var(--text-primary);opacity:.92;max-width:32ch}
+.static-hero .cta-row{display:flex;gap:11px;margin-top:26px;flex-wrap:wrap}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--body);font-size:14.5px;font-weight:500;letter-spacing:.015em;
+  padding:13px 24px;border-radius:2px;text-decoration:none;cursor:pointer;border:1px solid transparent;
+  transition:background .38s var(--ease),color .38s var(--ease),border-color .38s var(--ease),transform .38s var(--ease);
+  text-shadow:none}
+.btn-primary{background:var(--accent);color:#1a1206;font-weight:500}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line-strong);color:var(--text-primary);background:rgba(13,10,11,.35)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.btn-block{width:100%}
+@media (pointer:coarse){.btn{min-height:44px}}
+
+/* ---------- shared section furniture ---------- */
+.section{position:relative;z-index:2;padding:clamp(78px,11vw,140px) 0}
+/* the alternating bands are translucent rather than solid, so the dust drifts
+   through the whole page instead of only the sections that had no background */
+.section.alt{background:linear-gradient(180deg,rgba(30,23,21,.60),rgba(19,15,14,.40))}
+.wrap{width:min(var(--wrap),100% - clamp(32px,8vw,80px));margin-inline:auto}
+.kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--accent);opacity:.85;margin-bottom:16px}
+.h2{font-size:clamp(28px,4.1vw,50px);letter-spacing:-.015em;max-width:19ch;
+  font-variation-settings:"opsz" 144,"SOFT" 28,"WONK" 1}
+.lede{margin-top:18px;color:var(--text-secondary);max-width:56ch;font-size:16.5px}
+
+/* the brand seal between two rules that draw outward from it on scroll */
+/* The logo is the biggest it gets anywhere on the page here, so a customer can
+   actually read the mark. The row widens with it, otherwise the gold rules on
+   either side end up as stubs. */
+.divider{display:flex;align-items:center;justify-content:center;gap:clamp(16px,2.6vw,30px);
+  margin:0 auto;width:min(620px,100%)}
+.divider img{width:clamp(122px,12.5vw,178px);height:auto;aspect-ratio:1/1;
+  flex:none;opacity:0;transform:scale(.88);
+  transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.divider .rule{flex:1;height:1px;transform:scaleX(0);
+  transition:transform 1.3s var(--ease) .18s}
+.divider .rule:first-child{background:linear-gradient(90deg,transparent,var(--accent));
+  transform-origin:right center}
+.divider .rule:last-child{background:linear-gradient(90deg,var(--accent),transparent);
+  transform-origin:left center}
+.divider.in img{opacity:1;transform:none}
+.divider.in .rule{transform:scaleX(1)}
+
+/* entrance choreography */
+.rise{opacity:0;transform:translateY(26px);
+  transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.in .rise,.rise.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(24px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(1){transition-delay:.00s}
+.stagger.in>*:nth-child(2){transition-delay:.09s}
+.stagger.in>*:nth-child(3){transition-delay:.18s}
+.stagger.in>*:nth-child(4){transition-delay:.27s}
+.stagger.in>*:nth-child(5){transition-delay:.36s}
+.stagger.in>*:nth-child(6){transition-delay:.45s}
+/* retire the delays once the entrance is done, at matching specificity */
+.stagger.done.in>*:nth-child(1),.stagger.done.in>*:nth-child(2),
+.stagger.done.in>*:nth-child(3),.stagger.done.in>*:nth-child(4),
+.stagger.done.in>*:nth-child(5),.stagger.done.in>*:nth-child(6){transition-delay:0s !important}
+
+/* ---------- a. names strip ---------- */
+.names{position:relative;z-index:2;padding:34px 0;border-block:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(74,14,27,.16),rgba(13,10,11,0))}
+.names .kicker{text-align:center;margin-bottom:20px}
+.names-mask{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.names-track{display:flex;width:max-content;animation:marquee 46s linear infinite}
+.names-track span{font-family:var(--display);font-weight:400;font-size:clamp(21px,3vw,34px);
+  color:var(--text-primary);opacity:.82;padding:0 clamp(16px,2.4vw,30px);white-space:nowrap;
+  font-variation-settings:"opsz" 144,"SOFT" 40,"WONK" 1}
+.names-track img{width:clamp(34px,3.4vw,42px);height:clamp(34px,3.4vw,42px);
+  align-self:center;flex:none;margin:0 clamp(4px,.8vw,10px)}
+@keyframes marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+
+/* ---------- b. what we bake ---------- */
+.bake-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:clamp(16px,2vw,26px);margin-top:clamp(38px,5vw,58px)}
+.bake-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;position:relative;
+  transition:border-color .5s var(--ease),transform .5s var(--ease)}
+.bake-card:hover{border-color:var(--line-strong);transform:translateY(-4px)}
+.bake-card .ph{aspect-ratio:1/1;overflow:hidden;position:relative}
+.bake-card img{width:100%;height:100%;object-fit:cover;
+  transition:transform 1.1s var(--ease)}
+.bake-card:hover img{transform:scale(1.05)}
+.bake-card .body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
+.bake-card h3{font-size:20px;letter-spacing:-.01em;font-variation-settings:"opsz" 60,"SOFT" 25}
+.bake-card p{margin-top:10px;font-size:14.5px;color:var(--text-secondary);line-height:1.6;flex:1}
+.bake-card .go{margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);text-decoration:none;
+  transition:letter-spacing .4s var(--ease)}
+.bake-card .go:hover{letter-spacing:.24em}
+
+/* ---------- c. put a name on it ---------- */
+.pipe-wrap{margin-top:clamp(36px,5vw,54px);display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,54px);align-items:center}
+.pipe-stage{position:relative;aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);background:var(--panel)}
+.pipe-stage .cake{position:absolute;inset:0;background-size:cover;background-position:44% 58%}
+.pipe-stage .veil{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 40% 55%,rgba(5,4,6,.28),rgba(5,4,6,.7))}
+.pipe-art{position:absolute;left:0;right:0;top:47%;transform:translateY(-50%);text-align:center;padding:0 6%}
+.pipe-crown{width:60px;height:60px;margin:0 auto 8px;display:block;
+  opacity:calc(clamp(0,(var(--p,0) - .82)*6,1));
+  transform:translateY(calc((1 - clamp(0,(var(--p,0) - .82)*6,1))*10px))
+            scale(calc(.88 + .12*clamp(0,(var(--p,0) - .82)*6,1)))}
+.pipe-name{font-family:var(--script);font-weight:700;
+  font-size:clamp(30px,6.4vw,60px);line-height:1.25;color:#F7EFDF;
+  text-shadow:0 2px 0 rgba(120,84,30,.5),0 4px 9px rgba(0,0,0,.6);
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(var(--p,0)*100%),transparent calc(var(--p,0)*100%));
+  mask-image:linear-gradient(90deg,#000 calc(var(--p,0)*100%),transparent calc(var(--p,0)*100%));
+  padding:0 .12em;word-break:break-word}
+.pipe-nozzle{position:absolute;top:47%;width:9px;height:9px;border-radius:50%;background:#F7EFDF;
+  box-shadow:0 0 12px rgba(247,239,223,.7);opacity:0;pointer-events:none}
+.pipe-stage.piping .pipe-nozzle{opacity:.95}
+.pipe-hint{position:absolute;left:0;right:0;bottom:16px;text-align:center;font-family:var(--mono);
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-secondary);
+  opacity:calc(1 - clamp(0,var(--p,0)*2.2,1))}
+.pipe-controls .field-inline{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.pipe-controls input[type=text]{flex:1;min-width:150px}
+.pipe-hold{position:relative;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:none}
+.pipe-hold::after{content:"";position:absolute;left:0;bottom:0;height:2px;background:#1a1206;
+  width:calc(var(--p,0)*100%);opacity:.55}
+.pipe-done{margin-top:20px;opacity:0;transform:translateY(10px);pointer-events:none;
+  transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.pipe-done.on{opacity:1;transform:none;pointer-events:auto}
+.pipe-done p{font-size:14.5px;color:var(--text-secondary);margin-bottom:14px}
+
+/* ---------- d. gallery ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin-top:clamp(28px,4vw,40px)}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+  padding:9px 15px;border-radius:2px;border:1px solid var(--line);background:transparent;
+  color:var(--text-secondary);cursor:pointer;
+  transition:color .35s var(--ease),border-color .35s var(--ease),background .35s var(--ease)}
+.chip:hover{color:var(--text-primary);border-color:var(--line-strong)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#1a1206}
+@media (pointer:coarse){.chip{min-height:44px}}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;
+  margin-top:26px}
+.gal button{padding:0;border:1px solid var(--line);background:var(--panel);cursor:pointer;
+  border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:1/1;
+  transition:border-color .45s var(--ease),transform .45s var(--ease)}
+.gal button:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.gal button:hover img{transform:scale(1.06)}
+.gal .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;text-align:left;
+  font-family:var(--body);font-size:12.5px;color:var(--text-primary);
+  background:linear-gradient(180deg,transparent,rgba(8,6,7,.9));
+  opacity:0;transition:opacity .45s var(--ease)}
+.gal button:hover .cap,.gal button:focus-visible .cap{opacity:1}
+
+.lb{position:fixed;inset:0;z-index:150;background:rgba(8,6,7,.94);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;padding:clamp(14px,4vw,44px)}
+.lb[hidden]{display:none}
+.lb figure{margin:0;max-width:min(1000px,92vw);text-align:center}
+.lb img{max-height:78vh;width:auto;margin-inline:auto;border:1px solid var(--line)}
+.lb figcaption{margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-secondary)}
+.lb button{position:absolute;background:rgba(13,10,11,.7);border:1px solid var(--line-strong);
+  color:var(--accent);cursor:pointer;width:46px;height:46px;border-radius:2px;font-size:20px;
+  display:flex;align-items:center;justify-content:center;line-height:1;
+  transition:background .35s var(--ease)}
+.lb button:hover{background:var(--accent);color:#1a1206}
+.lb .x{top:clamp(12px,3vw,26px);right:clamp(12px,3vw,26px)}
+.lb .pv{left:clamp(8px,2vw,24px);top:50%;transform:translateY(-50%)}
+.lb .nx{right:clamp(8px,2vw,24px);top:50%;transform:translateY(-50%)}
+
+/* the gallery's closing invitation, which also fills the ragged last row */
+.more{margin-top:clamp(48px,6vw,76px);text-align:center}
+.more-rule{height:1px;background:var(--line);position:relative;
+  margin-bottom:clamp(34px,4.5vw,54px)}
+.more-rule i{position:absolute;left:50%;top:-2.5px;width:0;height:6px;
+  transform:translateX(-50%);border-radius:3px;
+  background:radial-gradient(ellipse at center,var(--accent) 0%,rgba(217,170,69,0) 72%);
+  transition:width 1.5s var(--ease)}
+.more.in .more-rule i{width:min(340px,62%)}
+.more-h{font-family:var(--display);font-weight:600;letter-spacing:-.012em;
+  font-size:clamp(24px,3.4vw,40px);line-height:1.1;
+  font-variation-settings:"opsz" 144,"SOFT" 28,"WONK" 1;
+  max-width:22ch;margin-inline:auto}
+.more-p{margin-top:15px;color:var(--text-secondary);font-size:16px;line-height:1.65;
+  max-width:52ch;margin-inline:auto}
+.more-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+  margin-top:clamp(24px,3vw,32px)}
+.social{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:13px 22px;border-radius:2px;border:1px solid var(--line-strong);
+  color:var(--text-primary);text-decoration:none;font-size:14.5px;font-weight:400;
+  transition:border-color .38s var(--ease),color .38s var(--ease),
+             transform .38s var(--ease),background .38s var(--ease)}
+.social:hover{border-color:var(--accent);color:var(--accent);
+  background:var(--accent-muted);transform:translateY(-2px)}
+.social svg{width:17px;height:17px;flex:none}
+@media (pointer:coarse){.social{min-height:44px}}
+@media (max-width:520px){.social{width:100%}}
+
+/* ---------- d2. Pixel Eye, the art studio ----------
+   A cooler, more neutral ground than the rest of the page. Paintings need a
+   gallery wall, and the warm gold canvas fights their colour. It is a shift of
+   room, not a second website: same type, same accent, same rhythm. */
+.section.art{background:linear-gradient(180deg,rgba(17,17,21,.92) 0%,rgba(13,13,17,.78) 60%,rgba(13,10,11,.55) 100%)}
+.art-open{text-align:center;max-width:min(720px,100%);margin-inline:auto}
+.pe-mark{width:clamp(132px,15vw,196px);height:auto;margin:0 auto clamp(20px,2.6vw,30px);
+  opacity:.92}
+.art .kicker{color:#CFC7BC}
+.art-h{max-width:20ch;margin-inline:auto}
+.art .lede{margin-inline:auto}
+
+/* the scroll-driven before and after */
+.reveal{margin:clamp(40px,5.5vw,72px) auto 0;max-width:min(620px,100%);--rv:1}
+.reveal-stage{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:3px;
+  border:1px solid rgba(217,170,69,.24);background:var(--panel)}
+.reveal-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* clip rather than resize, so the painting never squashes as it wipes across */
+.rv-after{position:absolute;inset:0;clip-path:inset(0 calc((1 - var(--rv,1))*100%) 0 0)}
+.rv-line{position:absolute;top:0;bottom:0;left:calc(var(--rv,1)*100%);width:2px;
+  transform:translateX(-1px);box-shadow:0 0 20px rgba(217,170,69,.55);
+  background:linear-gradient(180deg,transparent,var(--accent) 10%,var(--accent) 90%,transparent);
+  opacity:calc(1 - clamp(0,(var(--rv,1) - .97)*40,1))}
+.rv-tag{position:absolute;bottom:14px;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;padding:6px 11px;border-radius:11px;color:var(--text-primary);
+  background:rgba(8,8,15,.58);border:1px solid rgba(96,96,126,.32);backdrop-filter:blur(10px)}
+.rv-tag-l{left:14px;opacity:calc(1 - clamp(0,(var(--rv,1) - .55)*3,1))}
+.rv-tag-r{right:14px;opacity:clamp(0,(var(--rv,1) - .1)*3.2,1)}
+.reveal figcaption{margin-top:14px;text-align:center;font-family:var(--mono);font-size:10px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary)}
+
+/* the four steps */
+.art-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:clamp(18px,2.4vw,30px);margin-top:clamp(48px,6vw,80px)}
+.astep{position:relative;padding-left:16px;border-left:1px solid rgba(217,170,69,.22)}
+.astep .n{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--accent);
+  display:block;margin-bottom:11px}
+.astep h3{font-size:18px;font-variation-settings:"opsz" 60,"SOFT" 25}
+.astep p{margin-top:8px;font-size:14.5px;color:var(--text-secondary);line-height:1.62}
+
+/* sizes, prices, and the board */
+.art-pick{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);
+  gap:clamp(28px,4.5vw,58px);align-items:center;margin-top:clamp(52px,6.5vw,86px)}
+.pick-copy h3{font-size:clamp(23px,3vw,34px);letter-spacing:-.012em;
+  font-variation-settings:"opsz" 144,"SOFT" 28,"WONK" 1}
+.pick-note{margin-top:12px;color:var(--text-secondary);font-size:15px;max-width:44ch}
+.sizes{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.size{flex:1 1 120px;padding:15px 14px;border-radius:2px;cursor:pointer;text-align:center;
+  background:transparent;border:1px solid var(--line);color:var(--text-primary);
+  transition:border-color .35s var(--ease),background .35s var(--ease),color .35s var(--ease)}
+.size b{display:block;font-family:var(--display);font-size:18px;font-weight:600;
+  font-variation-settings:"opsz" 60}
+.size i{display:block;margin-top:3px;font-family:var(--mono);font-style:normal;font-size:9.5px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary)}
+.size:hover{border-color:var(--line-strong)}
+.size.on{background:var(--accent);border-color:var(--accent);color:#1a1206}
+.size.on i{color:#4a3410}
+@media (pointer:coarse){.size{min-height:60px}}
+.price-out{display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  margin-top:22px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.price-lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--text-secondary)}
+.price-val{font-family:var(--display);font-size:clamp(24px,3vw,34px);font-weight:600;
+  color:var(--accent);font-variation-settings:"opsz" 100}
+.pick-copy .btn{margin-top:24px}
+.pick-board img{width:100%;height:auto;border-radius:3px;border:1px solid var(--line)}
+.board-lead{margin-top:15px;font-size:14.5px;color:var(--text-secondary);line-height:1.62}
+/* Two ways to use it, side by side, because doing both is the selling point and
+   a sentence tacked on the end would have read as an afterthought. */
+.board-ways{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.way{padding:14px 14px 15px;border:1px solid var(--line);border-radius:3px;
+  background:rgba(255,255,255,.015);
+  transition:border-color .4s var(--ease),background .4s var(--ease)}
+.way:hover{border-color:var(--line-strong);background:rgba(217,170,69,.05)}
+.way svg{width:26px;height:26px;color:var(--accent);display:block;margin-bottom:10px}
+.way b{display:block;font-family:var(--display);font-size:15.5px;font-weight:600;
+  font-variation-settings:"opsz" 60,"SOFT" 25;letter-spacing:.005em}
+.way span{display:block;margin-top:6px;font-size:13px;color:var(--text-secondary);line-height:1.55}
+@media (max-width:400px){.board-ways{grid-template-columns:1fr}}
+
+/* the paintings */
+.art-gal-head{margin-top:clamp(56px,7vw,92px)}
+.art-gal-head h3{font-size:clamp(22px,2.8vw,32px);letter-spacing:-.012em;max-width:24ch;
+  font-variation-settings:"opsz" 144,"SOFT" 28,"WONK" 1}
+/* The paintings ride a carousel rather than a grid. A grid at this size showed
+   each piece too small to read as a painting; here one is large and its
+   neighbours peek in, so a visitor can flick through them like a photo album. */
+.carousel{position:relative;margin-top:clamp(22px,3vw,32px);
+  user-select:none;-webkit-user-select:none;touch-action:pan-y;outline:none}
+.carousel:focus-visible{outline:2px solid var(--accent);outline-offset:8px;border-radius:4px}
+.car-stage{position:relative;height:clamp(360px,54vw,600px);overflow:hidden;
+  display:flex;align-items:center;justify-content:center;cursor:grab}
+.car-stage.dragging{cursor:grabbing}
+.car-slide{position:absolute;top:50%;left:50%;width:clamp(250px,62vw,400px);aspect-ratio:4/5;
+  margin:0;border-radius:3px;overflow:hidden;border:1px solid var(--line);
+  background:var(--panel);
+  transform:translate(-50%,-50%);
+  transition:transform .58s var(--ease),opacity .58s var(--ease),
+             border-color .4s var(--ease),box-shadow .5s var(--ease);
+  will-change:transform,opacity}
+.car-slide img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+/* An opaque slide with a dark veil over it, rather than a faded slide. Fading
+   the slide itself let the painting behind show straight through the one in
+   front, which read as a printing fault rather than as depth. */
+.car-slide .veil{position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:#0B0B0E;opacity:0;transition:opacity .58s var(--ease)}
+.car-slide.is-on{border-color:rgba(217,170,69,.55);
+  box-shadow:0 34px 78px rgba(0,0,0,.62),0 0 0 1px rgba(217,170,69,.14)}
+.car-slide.is-on::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:3;
+  background:radial-gradient(ellipse 90% 70% at 50% 120%,rgba(217,170,69,.12),transparent 65%)}
+
+.car-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:20;
+  width:46px;height:46px;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;cursor:pointer;padding:0;font-size:21px;line-height:1;
+  background:rgba(13,10,11,.72);border:1px solid var(--line-strong);color:var(--accent);
+  backdrop-filter:blur(8px);
+  transition:background .35s var(--ease),color .35s var(--ease),
+             border-color .35s var(--ease),transform .35s var(--ease)}
+.car-nav:hover{background:var(--accent);color:#1a1206;border-color:var(--accent)}
+.car-nav.prev{left:clamp(4px,2vw,20px)}
+.car-nav.next{right:clamp(4px,2vw,20px)}
+@media (pointer:coarse){.car-nav{width:44px;height:44px}}
+
+.car-foot{display:flex;flex-direction:column;align-items:center;gap:12px;
+  margin-top:clamp(18px,2.4vw,26px)}
+/* The dot is drawn by the pseudo-element, so the button itself can be a proper
+   tap target without the dot becoming a saucer. */
+.car-dots{display:flex;gap:2px;flex-wrap:wrap;justify-content:center}
+.car-dots button{width:26px;height:26px;padding:0;border:0;background:transparent;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.car-dots button::before{content:"";width:8px;height:8px;border-radius:50%;
+  border:1px solid var(--line-strong);
+  transition:background .35s var(--ease),transform .35s var(--ease),border-color .35s var(--ease)}
+.car-dots button:hover::before{border-color:var(--accent)}
+.car-dots button.on::before{background:var(--accent);border-color:var(--accent);transform:scale(1.35)}
+@media (pointer:coarse){.car-dots button{width:40px;height:40px}}
+.car-hint{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--text-secondary);text-align:center}
+
+@media (max-width:820px){.art-pick{grid-template-columns:1fr}}
+
+/* ---------- d3. both together ----------
+   The bridge between the two halves of the business. It sits between them on
+   purpose, and borrows a little warmth back from the cake side so it does not
+   read as part of the art studio. */
+.section.pair{background:
+  radial-gradient(ellipse 70% 90% at 82% 40%,rgba(126,21,36,.16),transparent 62%),
+  linear-gradient(180deg,rgba(13,13,17,.5),rgba(20,15,14,.85))}
+.pair-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);
+  gap:clamp(30px,5vw,72px);align-items:center}
+
+.pair-visual{position:relative;padding:clamp(14px,2vw,26px) 0;
+  min-height:clamp(260px,32vw,400px)}
+/* height:auto is load bearing. The img tags carry width and height attributes,
+   which the browser applies as a real height, and aspect-ratio is ignored unless
+   the other dimension is auto. Without this the two images render at their full
+   900 and 1000 pixel heights and crash straight through the copy beside them. */
+.pair-visual img{position:absolute;height:auto;border-radius:3px;border:1px solid var(--line);
+  box-shadow:0 26px 60px rgba(0,0,0,.58);object-fit:cover}
+.pair-cake{width:56%;aspect-ratio:1/1;left:0;top:8%;transform:rotate(-4deg)}
+.pair-art{width:50%;aspect-ratio:4/5;right:0;top:0;transform:rotate(4deg)}
+.pair-amp{position:absolute;left:50%;top:58%;transform:translate(-50%,-50%);z-index:3;
+  width:clamp(44px,5vw,58px);height:clamp(44px,5vw,58px);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-size:clamp(20px,2.4vw,26px);font-weight:600;
+  font-variation-settings:"opsz" 60;color:#1a1206;background:var(--accent);
+  box-shadow:0 10px 30px rgba(0,0,0,.55),0 0 0 6px rgba(13,10,11,.85)}
+
+.pair-h{max-width:16ch}
+.pair-line{margin-top:14px;font-size:16.5px;color:var(--text-primary);opacity:.92;max-width:44ch;
+  line-height:1.6}
+.pair-facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pair-facts span{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--text-secondary);
+  padding:8px 13px;border:1px solid var(--line);border-radius:20px}
+.pair-copy .btn{margin-top:24px}
+.pair-note{margin-top:14px;font-size:13.5px;color:var(--text-secondary);max-width:46ch;
+  line-height:1.6}
+
+@media (max-width:820px){
+  .pair-grid{grid-template-columns:1fr;gap:clamp(24px,5vw,40px)}
+  .pair-visual{min-height:300px;max-width:460px;margin-inline:auto;width:100%}
+}
+@media (max-width:420px){.pair-visual{min-height:250px}}
+
+/* ---------- e. how it works ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:clamp(18px,2.4vw,30px);margin-top:clamp(38px,5vw,58px);counter-reset:s}
+.step{position:relative;padding-top:26px;border-top:1px solid var(--line)}
+.step .n{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--accent);
+  display:block;margin-bottom:14px}
+.step h3{font-size:19px;font-variation-settings:"opsz" 60,"SOFT" 25}
+.step p{margin-top:9px;font-size:14.5px;color:var(--text-secondary);line-height:1.62}
+.step::after{content:"";position:absolute;top:-1px;left:0;height:1px;width:0;background:var(--accent);
+  transition:width 1.1s var(--ease)}
+.steps.in .step::after{width:38%}
+
+/* ---------- f. faq ---------- */
+.faq{margin-top:clamp(34px,4.5vw,52px);border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;position:relative;
+  font-family:var(--display);font-size:clamp(17px,2vw,21px);font-weight:500;
+  font-variation-settings:"opsz" 60,"SOFT" 25;
+  transition:color .35s var(--ease)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--accent)}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:11px;height:11px;
+  border-right:1.5px solid var(--accent);border-bottom:1.5px solid var(--accent);
+  transform:translateY(-70%) rotate(45deg);transition:transform .45s var(--ease)}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq .a{padding:0 8% 24px 0;color:var(--text-secondary);font-size:15.5px;line-height:1.68}
+
+/* ---------- g. order ---------- */
+.order-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:clamp(28px,5vw,64px);margin-top:clamp(34px,4.5vw,52px);align-items:start}
+.assure{list-style:none;padding:0;margin:26px 0 0}
+.assure li{position:relative;padding-left:24px;font-size:14.5px;color:var(--text-secondary);
+  margin-bottom:10px}
+.assure li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;
+  border:1px solid var(--accent);transform:rotate(45deg)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;
+  background:var(--panel);border:1px solid var(--line);padding:clamp(20px,3vw,32px);
+  border-radius:var(--radius)}
+.field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.field.full{grid-column:1/-1}
+label{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--text-secondary)}
+label b{color:var(--accent)}
+input,select,textarea{font-family:var(--body);font-size:15px;font-weight:300;color:var(--text-primary);
+  background:var(--canvas);border:1px solid var(--line-strong);border-radius:2px;padding:12px 13px;
+  width:100%;transition:border-color .35s var(--ease)}
+input:hover,select:hover,textarea:hover{border-color:var(--accent)}
+textarea{resize:vertical;min-height:104px;line-height:1.6}
+/* Chrome paints autofilled fields pale blue, which looks broken on a dark form */
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill,
+input:-webkit-autofill:hover,input:-webkit-autofill:focus{
+  -webkit-text-fill-color:var(--text-primary);
+  -webkit-box-shadow:0 0 0 1000px var(--canvas) inset;
+  caret-color:var(--text-primary);
+  transition:background-color 9999s ease-out 0s}
+select{appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--accent) 50%),linear-gradient(135deg,var(--accent) 50%,transparent 50%);
+  background-position:calc(100% - 19px) 50%,calc(100% - 13px) 50%;
+  background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:38px}
+.hint{font-family:var(--body);font-size:12.5px;letter-spacing:0;text-transform:none;
+  color:var(--text-secondary);opacity:.8}
+.err{font-family:var(--body);font-size:12.5px;letter-spacing:0;text-transform:none;
+  color:#E2856F;min-height:1px}
+.field.bad input,.field.bad select,.field.bad textarea{border-color:#E2856F}
+/* ---------- the date picker, built in the brand's own colours ----------
+   The native browser calendar cannot be styled at all and shows US month/day
+   order regardless of the page, so this is a real calendar instead. */
+.datewrap{position:relative}
+#f-date{cursor:pointer;padding-right:42px;user-select:none;-webkit-user-select:none}
+#f-date::placeholder{color:var(--text-secondary);opacity:.8}
+.cal-ico{position:absolute;right:13px;top:50%;transform:translateY(-50%);
+  width:17px;height:17px;color:var(--accent);pointer-events:none;opacity:.85}
+.cal{position:absolute;z-index:95;top:calc(100% + 9px);left:0;
+  width:min(320px,calc(100vw - 44px));
+  background:var(--panel-2);border:1px solid var(--line-strong);border-radius:4px;
+  box-shadow:0 26px 64px rgba(0,0,0,.66),0 0 0 1px rgba(5,4,6,.5);
+  padding:15px 15px 11px;
+  opacity:0;visibility:hidden;transform:translateY(-7px) scale(.985);
+  transition:opacity .26s var(--ease),transform .26s var(--ease),visibility 0s .26s}
+.cal.open{opacity:1;visibility:visible;transform:none;
+  transition:opacity .26s var(--ease),transform .26s var(--ease),visibility 0s}
+/* opens upward instead when the field sits low on the screen */
+.cal.up{top:auto;bottom:calc(100% + 9px);transform:translateY(7px) scale(.985)}
+.cal.up.open{transform:none}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:13px}
+.cal-title{font-family:var(--display);font-size:16.5px;font-weight:600;letter-spacing:.005em;
+  font-variation-settings:"opsz" 60,"SOFT" 25;text-align:center;flex:1}
+.cal-nav{width:33px;height:33px;flex:none;display:flex;align-items:center;justify-content:center;
+  background:transparent;border:1px solid var(--line);border-radius:2px;color:var(--accent);
+  font-size:18px;line-height:1;cursor:pointer;padding:0;
+  transition:border-color .3s var(--ease),background .3s var(--ease),opacity .3s var(--ease)}
+.cal-nav:hover:not(:disabled){border-color:var(--accent);background:var(--accent-muted)}
+.cal-nav:disabled{opacity:.26;cursor:not-allowed}
+.cal-dow,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal-dow{margin-bottom:4px}
+.cal-dow span{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;
+  color:var(--text-secondary);text-align:center;padding:3px 0}
+.cal-grid button{aspect-ratio:1/1;min-height:36px;padding:0;
+  border:1px solid transparent;border-radius:2px;background:transparent;
+  color:var(--text-primary);font-family:var(--body);font-size:14px;font-weight:300;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;position:relative;
+  transition:background .24s var(--ease),color .24s var(--ease),border-color .24s var(--ease)}
+.cal-grid button:hover:not(:disabled){background:var(--accent-muted);border-color:var(--line-strong)}
+/* days before the three day notice, and anything past a year out, read as unavailable */
+.cal-grid button:disabled{color:var(--text-secondary);opacity:.26;cursor:not-allowed}
+.cal-grid button.today::after{content:"";position:absolute;bottom:5px;left:50%;
+  width:3px;height:3px;border-radius:50%;background:var(--accent);transform:translateX(-50%)}
+.cal-grid button:disabled.today::after{background:var(--text-secondary)}
+.cal-grid button.on{background:var(--accent);border-color:var(--accent);color:#1a1206;font-weight:500}
+.cal-grid button.on.today::after{background:#1a1206}
+.cal-grid .pad{visibility:hidden}
+.cal-foot{margin-top:11px;padding-top:10px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-secondary);text-align:center}
+/* The day buttons are square, so a 44px touch target also needs 44px of width.
+   Seven of those plus the gaps do not fit a 320px panel, so the panel grows and
+   its padding tightens. place() then clamps it back inside the screen. */
+@media (pointer:coarse){
+  .cal{width:min(344px,calc(100vw - 20px));padding:14px 11px 10px}
+  .cal-dow,.cal-grid{gap:2px}
+  .cal-grid button{min-height:44px}
+  .cal-nav{width:44px;height:44px}
+}
+/* On the narrowest phones seven 44px columns cannot fit no matter what, so the
+   cells stop being square and keep the 44px height, which is the axis a thumb
+   actually needs on a vertical grid. */
+@media (pointer:coarse) and (max-width:360px){
+  .cal{width:calc(100vw - 16px);padding:12px 9px 9px}
+  .cal-grid button{aspect-ratio:auto;min-height:44px}
+}
+
+.form-foot{grid-column:1/-1;font-size:12.5px;color:var(--text-secondary);text-align:center;
+  margin-top:-2px}
+.sent{grid-column:1/-1;text-align:center;padding:18px 0}
+.sent h3{font-size:22px;color:var(--accent)}
+.sent p{margin-top:10px;font-size:14.5px;color:var(--text-secondary)}
+.sent a{color:var(--accent)}
+
+/* ---------- h. contact + footer ---------- */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;
+  margin-top:clamp(30px,4vw,44px)}
+.ccard{display:block;padding:22px;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);text-decoration:none;
+  transition:border-color .45s var(--ease),transform .45s var(--ease)}
+.ccard:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+.ccard .l{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent)}
+.ccard strong{display:block;margin-top:9px;font-family:var(--display);font-size:18px;font-weight:500;
+  font-variation-settings:"opsz" 60}
+.ccard span.n{display:block;margin-top:5px;font-size:13px;color:var(--text-secondary)}
+.cmeta{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;
+  margin-top:clamp(30px,4vw,44px);padding-top:30px;border-top:1px solid var(--line)}
+.cmeta h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);font-weight:400}
+.cmeta p{margin-top:9px;font-size:14.5px;color:var(--text-secondary);line-height:1.6}
+
+footer{position:relative;z-index:2;text-align:center;padding:clamp(56px,7vw,86px) 0 44px;
+  border-top:1px solid var(--line);background:linear-gradient(180deg,rgba(74,14,27,.12),transparent)}
+footer .mark{width:92px;height:92px;margin:0 auto 20px;display:block}
+footer .fname{font-family:var(--display);font-size:24px;font-weight:600;letter-spacing:.01em;
+  font-variation-settings:"opsz" 100}
+footer .ftag{margin-top:7px;font-family:var(--display);font-style:italic;font-size:15px;
+  color:var(--text-secondary)}
+footer .fareas{margin-top:22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-secondary);opacity:.75;line-height:2}
+footer .fnote{margin-top:26px;font-size:12.5px;color:var(--text-secondary);opacity:.65;
+  max-width:52ch;margin-inline:auto;line-height:1.7}
+footer .flegal{margin-top:16px;font-size:12.5px;color:var(--text-secondary);opacity:.55}
+
+.fab{position:fixed;right:clamp(14px,3vw,26px);bottom:clamp(14px,3vw,26px);z-index:100;
+  display:inline-flex;align-items:center;gap:9px;padding:13px 19px;border-radius:40px;
+  background:var(--accent);color:#1a1206;text-decoration:none;font-size:14px;font-weight:500;
+  box-shadow:0 12px 34px rgba(0,0,0,.5);
+  transition:transform .4s var(--ease),background .4s var(--ease)}
+.fab:hover{transform:translateY(-3px);background:var(--accent-hover)}
+.fab svg{width:20px;height:20px;flex:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:940px){
+  .order-grid,.pipe-wrap{grid-template-columns:1fr}
+  .nav{position:fixed;inset:var(--header-h) 0 auto;flex-direction:column;align-items:stretch;
+    gap:0;background:rgba(13,10,11,.97);backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);padding:8px 0 16px;
+    transform:translateY(-8px);opacity:0;pointer-events:none;
+    transition:opacity .35s var(--ease),transform .35s var(--ease)}
+  .nav.open{opacity:1;transform:none;pointer-events:auto}
+  .nav a{padding:14px clamp(16px,5vw,40px);font-size:15px}
+  .nav .btn-nav{margin:10px clamp(16px,5vw,40px) 0;text-align:center;border-radius:2px}
+  .nav-toggle{display:flex}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  form{grid-template-columns:1fr}
+  .fab span{display:none}
+  .fab{padding:14px;border-radius:50%}
+}
+@media (max-height:560px){.ring,.chev{display:none}}
+
+/* ---------- THE FIVE STATIC-HERO GATES (must match the JS list exactly) ---------- */
+@media (max-width:720px),
+       (orientation:portrait) and (max-width:1024px),
+       (orientation:portrait) and (pointer:coarse),
+       (orientation:landscape) and (pointer:coarse) and (max-height:560px),
+       (prefers-reduced-motion:reduce){
+  .hero{height:auto}
+  .stage{position:relative;height:auto;overflow:visible}
+  .scrub-only{display:none !important}
+  .static-hero{display:flex}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;transition-delay:0s !important;scroll-behavior:auto !important}
+  .rise,.stagger>*{opacity:1 !important;transform:none !important}
+  .divider img,.divider .rule{opacity:1 !important;transform:none !important}
+  .more .more-rule i{width:min(340px,62%) !important}
+  .steps .step::after{width:38% !important}
+  .pipe-done{opacity:1 !important;transform:none !important;pointer-events:auto !important}
+  .env::before{transform:none !important}
+  .mote{display:none}
+  .names-track{animation:none;transform:none}
+  /* keep positional transforms that layout depends on */
+  .lb .pv,.lb .nx{transform:translateY(-50%) !important}
+  .pipe-art{transform:translateY(-50%) !important}
+}
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused !important}
+</style>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="env" aria-hidden="true"></div>
+<div class="motes" aria-hidden="true"></div>
+
+<header class="site-header" id="hdr">
+  <a class="brand" href="#top" aria-label="The Bakekeep, back to top">
+    <img src="assets/brand/logo-96.png" alt="" width="42" height="42" decoding="async">
+    <span><b>The Bakekeep</b><i>cakes &amp; bakes</i></span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Main">
+    <a href="#bake">Cakes</a>
+    <a href="#name">Your name</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#art">Art</a>
+    <a href="#how">How it works</a>
+    <a href="#questions">Questions</a>
+    <a class="btn-nav" href="#order">Order</a>
+  </nav>
+  <button class="nav-toggle" id="navBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="main" tabindex="-1">
+<div id="top"></div>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero" aria-label="The Bakekeep">
+  <div class="stage" id="stage">
+
+    <div class="scrub-only">
+      <div class="poster" id="poster" aria-hidden="true"></div>
+      <video id="vid" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+      <div class="scrim" aria-hidden="true"></div>
+      <svg class="ring" id="ring" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/>
+      </svg>
+
+      <div class="bands" id="bands">
+        <div class="band b1" data-a="0" data-b="0.24" data-ramp="0.030">
+          <h2 data-split="word">Every cake starts as nothing.</h2>
+        </div>
+        <div class="band b2" data-a="0.28" data-b="0.52" data-spread="0.42">
+          <h2 data-split="char">Mixed, poured and finished by hand.</h2>
+        </div>
+        <div class="band b3" data-a="0.56" data-b="0.76">
+          <h2 data-split="word" data-em="3">Baked for your date. Never before it.</h2>
+        </div>
+        <div class="band b4" data-a="0.80" data-b="1">
+          <h2 data-split="word">Then it gets a name.</h2>
+          <p class="sub">Every cake that leaves this kitchen is made for one person.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#order">Order on WhatsApp</a>
+            <a class="btn btn-ghost" href="#gallery">See the cakes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="static-hero">
+      <div class="shot" id="shot" aria-hidden="true"></div>
+      <div class="shade" aria-hidden="true"></div>
+      <div class="inner">
+        <h1>Every cake leaves with a name on it.</h1>
+        <p class="sub">Homemade custom cakes, cupcakes, butter cakes and brownies. Baked in Divulapitiya for the day you need them.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#order">Order on WhatsApp</a>
+          <a class="btn btn-ghost" href="#gallery">See the cakes</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== a. NAMES ==================== -->
+<div class="names" aria-label="Customers who keep coming back">
+  <p class="kicker">The names our hands know by heart</p>
+  <div class="names-mask">
+    <div class="names-track" id="track" aria-hidden="true"></div>
+  </div>
+  <p class="sr" id="namesSr"></p>
+</div>
+
+<!-- ==================== b. WHAT WE BAKE ==================== -->
+<section class="section" id="bake">
+  <div class="wrap">
+    <p class="kicker rise">What we bake</p>
+    <h2 class="h2 rise">Four things, done properly.</h2>
+    <div class="bake-grid stagger">
+      <article class="bake-card">
+        <div class="ph"><img src="assets/gallery/9.jpg" alt="A celebration cake decorated as a gentleman's shirt with a red bow tie" loading="lazy" width="640" height="640"></div>
+        <div class="body">
+          <h3>Custom Celebration Cakes</h3>
+          <p>Birthdays, engagements, anniversaries and character themes. Designed from your idea or a photo you send.</p>
+          <a class="go" href="#order" data-pick="Custom Celebration Cake">Order this &rarr;</a>
+        </div>
+      </article>
+      <article class="bake-card">
+        <div class="ph"><img src="assets/gallery/25.jpg" alt="A tray of freshly baked party cupcakes" loading="lazy" width="640" height="640"></div>
+        <div class="body">
+          <h3>Cupcakes</h3>
+          <p>Matching sets for dessert tables, office treats and gifting. On their own or beside a cake.</p>
+          <a class="go" href="#order" data-pick="Cupcakes">Order this &rarr;</a>
+        </div>
+      </article>
+      <article class="bake-card">
+        <div class="ph"><img src="assets/gallery/35.jpg" alt="A homemade coconut butter cake" loading="lazy" width="640" height="640"></div>
+        <div class="body">
+          <h3>Butter Cakes &amp; Coconut Cakes</h3>
+          <p>Coconut, ribbon, marble and chocolate. The homemade classics, soft and simple.</p>
+          <a class="go" href="#order" data-pick="Butter Cake or Coconut Cake">Order this &rarr;</a>
+        </div>
+      </article>
+      <article class="bake-card">
+        <div class="ph"><img src="assets/gallery/24.jpg" alt="Chocolate fudge brownies" loading="lazy" width="640" height="640"></div>
+        <div class="body">
+          <h3>Brownies &amp; Treats</h3>
+          <p>Fudge brownies, swiss rolls and chocolate slabs, by the box, for when a whole cake is too much.</p>
+          <a class="go" href="#order" data-pick="Brownies &amp; Treats">Order this &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== c. PUT A NAME ON IT ==================== -->
+<section class="section alt" id="name">
+  <div class="wrap">
+    <div class="divider" aria-hidden="true">
+      <span class="rule"></span>
+      <img src="assets/brand/logo.webp" alt="" width="178" height="178" loading="lazy" decoding="async">
+      <span class="rule"></span>
+    </div>
+    <div style="text-align:center;margin-top:26px">
+      <p class="kicker rise">Try it</p>
+      <h2 class="h2 rise" style="margin-inline:auto">Whose day is it?</h2>
+      <p class="lede rise" style="margin-inline:auto">Type a name, then hold the button. This is the part that happens last, by hand, on every single cake.</p>
+    </div>
+
+    <div class="pipe-wrap">
+      <div class="pipe-stage" id="pipeStage">
+        <div class="cake" aria-hidden="true"></div>
+        <div class="veil" aria-hidden="true"></div>
+        <div class="pipe-art">
+          <img class="pipe-crown" src="assets/brand/logo.webp" alt="" width="60" height="60" loading="lazy" decoding="async">
+          <div class="pipe-name" id="pipeName">Amma</div>
+        </div>
+        <i class="pipe-nozzle" id="nozzle" aria-hidden="true"></i>
+        <p class="pipe-hint" aria-hidden="true">Hold the button to pipe it</p>
+      </div>
+
+      <div class="pipe-controls">
+        <div class="field">
+          <label for="pipeInput">The name on the cake</label>
+          <input id="pipeInput" type="text" maxlength="18" value="Amma" autocomplete="off" spellcheck="false">
+          <span class="hint">Up to 18 letters, just like the real thing.</span>
+        </div>
+        <div class="field-inline">
+          <button class="btn btn-primary pipe-hold" id="pipeHold" type="button">Hold to pipe it</button>
+        </div>
+        <div class="pipe-done" id="pipeDone">
+          <p>That is the last thing that happens before a cake goes in the box. Want one with this name on it?</p>
+          <a class="btn btn-ghost" href="#order" id="pipeGo">Order this cake</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== d. GALLERY ==================== -->
+<section class="section" id="gallery">
+  <div class="wrap">
+    <p class="kicker rise">The gallery</p>
+    <h2 class="h2 rise">Every one of these was somebody's day.</h2>
+    <p class="lede rise">Nothing here is a fixed menu. Use them as ideas, or send a photo of your own.</p>
+    <div class="filters" role="group" aria-label="Filter cakes by type">
+      <button class="chip on" data-f="all" type="button">All</button>
+      <button class="chip" data-f="custom" type="button">Custom Cakes</button>
+      <button class="chip" data-f="cupcakes" type="button">Cupcakes</button>
+      <button class="chip" data-f="butter" type="button">Butter &amp; Coconut Cakes</button>
+      <button class="chip" data-f="treats" type="button">Brownies &amp; Treats</button>
+    </div>
+    <div class="gal" id="gal"></div>
+
+    <div class="more">
+      <div class="more-rule" aria-hidden="true"><i></i></div>
+      <p class="more-h rise"><span id="galCount">36</span> names fit on this page.</p>
+      <p class="more-p rise">There are a lot more where these came from. A new cake leaves this kitchen most weeks, and it goes up on Facebook and Instagram the same day.</p>
+      <div class="more-links rise">
+        <a class="social" href="https://www.facebook.com/thebakekeep" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.12 5.32H17V2.14A26.1 26.1 0 0 0 14.26 2C11.54 2 9.68 3.66 9.68 6.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V7.05c0-1.05.28-1.73 1.76-1.73Z"/></svg>
+          <span>See more on Facebook</span>
+        </a>
+        <a class="social" href="https://www.instagram.com/thebakekeep/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.2" cy="6.8" r="1.25" fill="currentColor"/>
+          </svg>
+          <span>See more on Instagram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== d2. PIXEL EYE, THE ART STUDIO ==================== -->
+<section class="section art" id="art">
+  <div class="wrap">
+    <div class="art-open">
+      <img class="pe-mark rise" src="assets/brand/pixeleye.webp" alt="Pixel Eye by Aegon"
+           width="560" height="622" loading="lazy" decoding="async">
+      <p class="kicker rise">The other half of this kitchen</p>
+      <h2 class="h2 art-h rise">The cake is gone by Monday. This is not.</h2>
+      <p class="lede rise">Send one photograph of someone you love. It comes back painted, printed, and standing on a board they can keep on a shelf for years.</p>
+    </div>
+
+    <figure class="reveal rise" id="reveal">
+      <div class="reveal-stage">
+        <img class="rv-before" src="assets/art/feature-before.jpg" alt="An ordinary photograph of a woman in a white saree, taken on a phone" width="1000" height="1250" loading="lazy" decoding="async">
+        <div class="rv-after" id="rvAfter">
+          <img src="assets/art/feature-after.jpg" alt="The same photograph painted as an oil portrait" width="1000" height="1250" loading="lazy" decoding="async">
+        </div>
+        <span class="rv-line" aria-hidden="true"></span>
+        <span class="rv-tag rv-tag-l" aria-hidden="true">Their photo</span>
+        <span class="rv-tag rv-tag-r" aria-hidden="true">Your painting</span>
+      </div>
+      <figcaption>One photograph, Digital painting. Scroll to watch it happen.</figcaption>
+    </figure>
+
+    <div class="art-steps stagger">
+      <div class="astep"><span class="n">01</span><h3>Send one photo</h3>
+        <p>On WhatsApp, the same way you order a cake. A clear photo of the face is all it takes.</p></div>
+      <div class="astep"><span class="n">02</span><h3>It gets painted</h3>
+        <p>Three to five days of work in Photoshop, brushed in layer by layer from your photograph.</p></div>
+      <div class="astep"><span class="n">03</span><h3>You approve it</h3>
+        <p>A proof comes to you before anything is printed. Changes happen here, not after.</p></div>
+      <div class="astep"><span class="n">04</span><h3>It comes on a board</h3>
+        <p>Printed and mounted on a rigid board with a stand behind it. No frame to buy and no glass to break.</p></div>
+    </div>
+
+    <div class="art-pick">
+      <div class="pick-copy">
+        <p class="kicker rise">Sizes and prices</p>
+        <h3 class="rise">Pick a size.</h3>
+        <p class="rise pick-note">Prices include the painting, the print and the board. Delivery is charged by distance, the same as a cake.</p>
+        <div class="sizes" role="group" aria-label="Choose a size">
+          <button class="size on" type="button" data-size="12 x 15 inches" data-price="3,950">
+            <b>12 &times; 15</b><i>inches</i></button>
+          <button class="size" type="button" data-size="12 x 18 inches" data-price="4,900">
+            <b>12 &times; 18</b><i>inches</i></button>
+          <button class="size" type="button" data-size="Another size" data-price="ask">
+            <b>Another size</b><i>tell us</i></button>
+        </div>
+        <p class="price-out" aria-live="polite">
+          <span class="price-lbl">12 x 15 inches</span>
+          <span class="price-val" id="priceVal">Rs 3,950</span>
+        </p>
+        <a class="btn btn-primary" href="#order" id="artOrder">Order this on WhatsApp</a>
+      </div>
+      <div class="pick-board">
+        <img src="assets/art/board.jpg" alt="A finished portrait printed and mounted on a rigid board, standing on a table" width="1600" height="2134" loading="lazy" decoding="async">
+        <p class="board-lead">It is a board, not a frame. The print is mounted flat onto rigid ply, so there is no glass to break and nothing else to buy.</p>
+        <div class="board-ways">
+          <div class="way">
+            <!-- the board seen edge on, with its kickstand out, on a table -->
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+                 stroke-width="1.9" stroke-linecap="round">
+              <path d="M8.5 3.5 V19"/>
+              <path d="M8.5 11.5 L15.5 19"/>
+              <path d="M3.5 19 H20.5"/>
+            </svg>
+            <b>Stand it up</b>
+            <span>A stand folds out at the back, for a shelf, a desk or a table.</span>
+          </div>
+          <div class="way">
+            <!-- a nail, the wire, and the board hanging from it -->
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="2.6" r="1.5" fill="currentColor"/>
+              <!-- the wire lands inside the board's top edge, not on its corners,
+                   or the two shapes merge into one blob at this size -->
+              <path d="M12 4.1 L7 9.4 M12 4.1 L17 9.4" fill="none" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round"/>
+              <rect x="3.4" y="9.4" width="17.2" height="11" rx="1" fill="none"
+                    stroke="currentColor" stroke-width="1.9"/>
+            </svg>
+            <b>Or hang it up</b>
+            <span>Light enough to go straight on a wall, with no frame needed.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="art-gal-head">
+      <p class="kicker rise">Painted so far</p>
+      <h3 class="rise">Every one of these started as a phone photo.</h3>
+    </div>
+
+    <div class="carousel" id="artCar" tabindex="0" role="group"
+         aria-roledescription="carousel" aria-label="Paintings, use the arrow keys or swipe">
+      <div class="car-stage" id="carStage"></div>
+      <button class="car-nav prev" id="carPrev" type="button" aria-label="Previous painting">&#8249;</button>
+      <button class="car-nav next" id="carNext" type="button" aria-label="Next painting">&#8250;</button>
+    </div>
+    <div class="car-foot">
+      <div class="car-dots" id="carDots" role="tablist" aria-label="Choose a painting"></div>
+      <p class="car-hint">Swipe, or tap the painting to open it full screen</p>
+      <p class="sr" id="carLive" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== d3. BOTH TOGETHER ==================== -->
+<section class="section pair" id="both">
+  <div class="wrap">
+    <div class="pair-grid">
+      <div class="pair-visual rise" aria-hidden="true">
+        <img class="pair-cake" src="assets/gallery/36.jpg" alt="" width="900" height="900" loading="lazy" decoding="async">
+        <img class="pair-art" src="assets/art/thumb/3.jpg" alt="" width="800" height="1000" loading="lazy" decoding="async">
+        <span class="pair-amp">&amp;</span>
+      </div>
+      <div class="pair-copy">
+        <p class="kicker rise">Better together</p>
+        <h2 class="h2 pair-h rise">One gets eaten. One gets kept.</h2>
+        <p class="lede rise">For the days that deserve both. A milestone birthday, a graduation, an engagement, a farewell, or Amma's day.</p>
+        <p class="pair-line rise">The cake carries the evening. The painting is still on the wall years later.</p>
+        <div class="pair-facts rise">
+          <span>One message</span><span>One date</span><span>One delivery</span>
+        </div>
+        <a class="btn btn-primary rise" href="#order" id="bothOrder">Order both on WhatsApp</a>
+        <p class="pair-note rise">Allow about a week when you want both, because the painting takes the longer of the two.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== e. HOW IT WORKS ==================== -->
+<section class="section alt" id="how">
+  <div class="wrap">
+    <p class="kicker rise">How it works</p>
+    <h2 class="h2 rise">Four steps, then it is booked.</h2>
+    <div class="steps stagger">
+      <div class="step"><span class="n">01</span><h3>Send the details</h3>
+        <p>Type, date, size, flavour, and your design idea. The form below writes the message for you.</p></div>
+      <div class="step"><span class="n">02</span><h3>Get a price</h3>
+        <p>A full quote comes back, priced by design, size and flavour. Nothing starts until you say yes.</p></div>
+      <div class="step"><span class="n">03</span><h3>Pay half to hold the date</h3>
+        <p>A 50 percent advance by bank transfer books your day. The rest is settled when you collect it.</p></div>
+      <div class="step"><span class="n">04</span><h3>Collect or have it delivered</h3>
+        <p>Free pickup in Divulapitiya. Delivery across the area, charged by distance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== f. QUESTIONS ==================== -->
+<section class="section" id="questions">
+  <div class="wrap">
+    <p class="kicker rise">The real questions</p>
+    <h2 class="h2 rise">The things people ask before they order.</h2>
+    <div class="faq">
+      <details><summary>Will it actually look like the photo I send?</summary>
+        <p class="a">Usually very close, and where it cannot be, you will be told before you pay. Hand piping is not printing, so small things differ. If a design is beyond what a home kitchen can do, that gets said honestly instead of guessed at.</p></details>
+      <details><summary>Do I really have to pay before I see it?</summary>
+        <p class="a">Half, and only to hold the date. Ingredients get bought and the day gets blocked off for you. The other half is paid when the cake is in your hands.</p></details>
+      <details><summary>How much is a cake?</summary>
+        <p class="a">It depends on size, design and flavour, so every cake is quoted. Send the details and a full price comes back before anything is mixed.</p></details>
+      <details><summary>How early do I need to order?</summary>
+        <p class="a">Three days at the very least. Detailed designs want a week, and dates around holidays go early.</p></details>
+      <details><summary>Do you deliver to me?</summary>
+        <p class="a">Divulapitiya, Minuwangoda, Meerigama, Negombo, Ja-Ela and Gampaha. Delivery is charged by distance and the fee is in your quote.</p></details>
+      <details><summary>Will it be fresh?</summary>
+        <p class="a">Nothing sits on a shelf here. Your cake is baked for your date, and only a few orders are taken at a time so that stays true.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== g. ORDER ==================== -->
+<section class="section alt" id="order">
+  <div class="wrap">
+    <div class="order-grid">
+      <div>
+        <p class="kicker rise">Request a quote</p>
+        <h2 class="h2 rise">Tell us the cake you are imagining.</h2>
+        <p class="lede rise">Fill this in and press send. WhatsApp opens with your order already written out. Nothing is sent until you press send there.</p>
+        <ul class="assure rise">
+          <li>No payment on this site</li>
+          <li>A quote comes back first</li>
+          <li>Your details go only to WhatsApp</li>
+        </ul>
+      </div>
+
+      <form id="orderForm" novalidate>
+        <div class="field"><label for="f-name">Your name <b>*</b></label>
+          <input id="f-name" name="name" type="text" autocomplete="name"><span class="err" data-for="f-name"></span></div>
+        <div class="field"><label for="f-phone">Contact number <b>*</b></label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="07X XXX XXXX"><span class="err" data-for="f-phone"></span></div>
+        <div class="field"><label for="f-type">Cake type <b>*</b></label>
+          <select id="f-type" name="type">
+            <option value="">Choose one</option>
+            <option>Custom Celebration Cake</option><option>Cupcakes</option>
+            <option>Butter Cake or Coconut Cake</option><option>Brownies &amp; Treats</option>
+            <option>Cake &amp; Cupcake Set</option>
+            <option>Oil Art Portrait (Pixel Eye)</option>
+            <option>Cake and painting together</option>
+            <option>Not sure yet, please advise</option>
+          </select><span class="err" data-for="f-type"></span></div>
+        <div class="field"><label for="f-date">Date you need it <b>*</b></label>
+          <div class="datewrap">
+            <input id="f-date" name="date" type="text" readonly placeholder="Choose a date"
+                   autocomplete="off" aria-haspopup="dialog" aria-expanded="false">
+            <svg class="cal-ico" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="5" width="17" height="15.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M3.5 9.5h17M8 3.2v3.4M16 3.2v3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <div class="cal" id="cal" role="dialog" aria-label="Choose the date you need the cake">
+              <div class="cal-head">
+                <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month">&#8249;</button>
+                <p class="cal-title" id="calTitle" aria-live="polite"></p>
+                <button type="button" class="cal-nav" id="calNext" aria-label="Next month">&#8250;</button>
+              </div>
+              <div class="cal-dow" aria-hidden="true">
+                <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+              </div>
+              <div class="cal-grid" id="calGrid"></div>
+              <p class="cal-foot">Three days notice at the least</p>
+            </div>
+          </div>
+          <span class="hint">Three days from today at the earliest.</span><span class="err" data-for="f-date"></span></div>
+        <div class="field"><label for="f-size">Servings or cake size <b>*</b></label>
+          <input id="f-size" name="size" type="text" placeholder="1 kg, or about 15 people"><span class="err" data-for="f-size"></span></div>
+        <div class="field"><label for="f-flavour">Flavour <b>*</b></label>
+          <input id="f-flavour" name="flavour" type="text" placeholder="chocolate, vanilla, coconut, ribbon"><span class="hint">Not sure? Type "advise me".</span><span class="err" data-for="f-flavour"></span></div>
+        <div class="field"><label for="f-service">Pickup or delivery <b>*</b></label>
+          <select id="f-service" name="service">
+            <option value="">Choose one</option><option>Pickup from Divulapitiya</option>
+            <option>Delivery</option><option>Not sure yet</option>
+          </select><span class="err" data-for="f-service"></span></div>
+        <div class="field"><label for="f-town">Delivery town</label>
+          <input id="f-town" name="town" type="text" placeholder="Minuwangoda"><span class="hint">Charged by distance.</span></div>
+        <div class="field full"><label for="f-details">Design idea, theme, wording <b>*</b></label>
+          <textarea id="f-details" name="details" placeholder="The occasion, colours, theme, the name or message for the cake, or a cake from the gallery you liked."></textarea>
+          <span class="hint">Have a reference photo? Send it on WhatsApp once the message opens.</span>
+          <span class="err" data-for="f-details"></span></div>
+        <div class="field full"><button class="btn btn-primary btn-block" type="submit">Send my order on WhatsApp</button></div>
+        <p class="form-foot">This opens WhatsApp with your details filled in.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== h. CONTACT ==================== -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <p class="kicker rise">Get in touch</p>
+    <h2 class="h2 rise">Ready when your celebration&nbsp;is.</h2>
+    <p class="lede rise">Message any time. Replies usually come the same day.</p>
+    <div class="cgrid stagger">
+      <a class="ccard" id="waCard" href="#"><span class="l">WhatsApp</span><strong>+94 72 385 5550</strong><span class="n">The fastest way to reach us</span></a>
+      <a class="ccard" href="tel:+94723855550"><span class="l">Call</span><strong>+94 72 385 5550</strong><span class="n">If you would rather talk it through</span></a>
+      <a class="ccard" href="https://www.facebook.com/thebakekeep" target="_blank" rel="noopener"><span class="l">Facebook</span><strong>/thebakekeep</strong><span class="n">Messenger and the latest cakes</span></a>
+      <a class="ccard" href="https://www.instagram.com/thebakekeep/" target="_blank" rel="noopener"><span class="l">Instagram</span><strong>@thebakekeep</strong><span class="n">Photos from every order</span></a>
+    </div>
+    <div class="cmeta">
+      <div><h4>Pickup</h4><p>Divulapitiya. The address is shared once your order is confirmed.</p></div>
+      <div><h4>We deliver to</h4><p>Divulapitiya, Minuwangoda, Meerigama, Negombo, Ja-Ela and Gampaha, charged by distance.</p></div>
+      <div><h4>To confirm a date</h4><p>A 50 percent advance by bank transfer. The balance on collection.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="mark" src="assets/brand/logo.webp" alt="" width="92" height="92" loading="lazy" decoding="async">
+    <p class="fname">The Bakekeep</p>
+    <p class="ftag">Where Every Celebration Gets Its Crown</p>
+    <p class="fareas">Divulapitiya &middot; Minuwangoda &middot; Meerigama &middot; Negombo &middot; Ja-Ela &middot; Gampaha</p>
+    <p class="fnote">The opening film is a made image. Every cake photograph on this page is a real Bakekeep order. Oil art portraits are painted by Pixel Eye by Aegon, the studio side of the same kitchen.</p>
+    <p class="flegal">&copy; <span id="yr"></span> The Bakekeep. Homemade in Sri Lanka.</p>
+  </div>
+</footer>
+
+<a class="fab" id="fab" href="#" aria-label="Message us on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81s-.39-.12-.56.12-.64.81-.79.98-.29.19-.54.06a6.7 6.7 0 0 1-1.99-1.23 7.5 7.5 0 0 1-1.38-1.72c-.14-.25-.01-.38.11-.5s.25-.29.37-.43.17-.25.25-.41.04-.31-.02-.43-.56-1.34-.76-1.84-.4-.42-.56-.43h-.47a.9.9 0 0 0-.65.31 2.75 2.75 0 0 0-.86 2.05c0 1.21.88 2.37 1 2.54s1.73 2.65 4.2 3.71c.59.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.67-1.18s.21-1.08.15-1.18-.22-.19-.47-.31"/></svg>
+  <span>Order on WhatsApp</span>
+</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Cake photo" hidden>
+  <button class="x" id="lbX" type="button" aria-label="Close">&times;</button>
+  <button class="pv" id="lbP" type="button" aria-label="Previous photo">&#8249;</button>
+  <figure><img id="lbI" alt=""><figcaption id="lbC"></figcaption></figure>
+  <button class="nx" id="lbN" type="button" aria-label="Next photo">&#8250;</button>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var WA = "94723855550";
+var MIN_DAYS = 3;
+var VIDEO_URL = "assets/hero-scrub.mp4";
+var VIDEO_BYTES = 1639247;
+var POSTER = "assets/hero-poster.jpg";
+var ENDING = "assets/hero-ending.jpg";
+
+var $  = function(s,r){return (r||document).querySelector(s)};
+var $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var clamp = function(v,lo,hi){return Math.min(hi,Math.max(lo,v))};
+var smoothstep = function(p,e0,e1){var t=clamp((p-e0)/(e1-e0),0,1);return t*t*(3-2*t)};
+function rng(seed){var s=seed>>>0;return function(){s=(s*1664525+1013904223)>>>0;return s/4294967296}}
+
+$("#yr").textContent = new Date().getFullYear();
+
+/* ---------------- the gold dust ----------------
+   Seeded, so the "random" scatter is identical on every load. Negative delays
+   put every mote mid-drift at first paint instead of all starting together. */
+(function(){
+  var wrap=$(".motes"); if(!wrap)return;
+  var r=rng(20260820);
+  var pick=function(a,b){return a+r()*(b-a)};
+  var TIERS=[
+    {cls:"far",  n:13, o:[.12,.18], dur:[70,94], dx:[-24,24]},
+    {cls:"mid",  n:9,  o:[.18,.25], dur:[50,68], dx:[-40,40]},
+    {cls:"near", n:5,  o:[.21,.29], dur:[34,48], dx:[-58,58]}
+  ];
+  var out=[];
+  TIERS.forEach(function(t){
+    for(var i=0;i<t.n;i++){
+      var dur=pick(t.dur[0],t.dur[1]);
+      out.push('<i class="mote '+t.cls+'" style="left:'+pick(2,98).toFixed(2)+'%'
+        +';--o:'+pick(t.o[0],t.o[1]).toFixed(3)
+        +';--dur:'+dur.toFixed(1)+'s'
+        +';--dx:'+pick(t.dx[0],t.dx[1]).toFixed(0)+'px'
+        +';--delay:'+(-r()*dur).toFixed(1)+'s"></i>');
+    }
+  });
+  /* interleave the tiers so hiding every second one on phones still leaves a mix */
+  var mixed=[],max=Math.max.apply(null,TIERS.map(function(t){return t.n})),k=0,byTier=[];
+  var at=0; TIERS.forEach(function(t){byTier.push(out.slice(at,at+t.n));at+=t.n});
+  for(var i=0;i<max;i++) byTier.forEach(function(g){if(g[i])mixed.push(g[i])});
+  wrap.innerHTML=mixed.join("");
+})();
+
+/* ---------------- WhatsApp default links ---------------- */
+var hello = "Hello The Bakekeep! I would like to ask about ordering a cake.";
+var helloLink = "https://wa.me/"+WA+"?text="+encodeURIComponent(hello);
+["#fab","#waCard"].forEach(function(s){var e=$(s);if(e){e.href=helloLink;e.target="_blank";e.rel="noopener"}});
+
+/* ---------------- header + nav ---------------- */
+var hdr=$("#hdr"), navEl=$("#nav"), navBtn=$("#navBtn");
+addEventListener("scroll",function(){hdr.classList.toggle("stuck",scrollY>14)},{passive:true});
+navBtn.addEventListener("click",function(){
+  var open=navEl.classList.toggle("open");
+  navBtn.setAttribute("aria-expanded",open?"true":"false");
+  navBtn.setAttribute("aria-label",open?"Close menu":"Open menu");
+});
+$$("#nav a").forEach(function(a){a.addEventListener("click",function(){
+  navEl.classList.remove("open");navBtn.setAttribute("aria-expanded","false")})});
+
+/* ---------------- names marquee ---------------- */
+/* Real customers, first names only, mixed rather than grouped so the strip does
+   not read as two batches. Family words (Amma, Akka, Ayya) are relationships, not
+   names, so they are deliberately not in here. */
+var NAMES=["Sandaru","Dasuni","Malsha","Thanushi","Dahamdi","Malith","Kavipriya",
+ "Sandashi","Sanju","Awanthi","Hiru","Samindi","Chapa","Lakshitha","Thubishan",
+ "Udani","Nishi","Nadeesha","Thilini","Dilumi","Maneka","Ayesha"];
+(function(){
+  var t=$("#track"), crown='<img src="assets/brand/logo-96.png" alt="" width="42" height="42" decoding="async">';
+  /* screen readers get the plain list once, instead of the repeated visual track */
+  $("#namesSr").textContent=NAMES.join(", ")+".";
+  var one=NAMES.map(function(n){return "<span>"+n+"</span>"+crown}).join("");
+  t.innerHTML=one;
+  /* grow one half of the track past the widest screen we support, measured not
+     guessed, then mirror it so the -50% loop has no gap */
+  var guard=0;
+  while(t.scrollWidth < 2700 && guard++ < 8){ t.insertAdjacentHTML("beforeend", one) }
+  t.innerHTML = t.innerHTML + t.innerHTML;
+})();
+
+/* ---------------- gallery ---------------- */
+var GALLERY=[
+ {id:"1",cat:"custom",t:"18th Birthday Celebration Cake"},
+ {id:"2",cat:"custom",t:"Valentine Heart Cake"},
+ {id:"3",cat:"custom",t:"Artist's Palette Birthday Cake"},
+ {id:"4",cat:"custom",t:"Blue Daisy Birthday Cake"},
+ {id:"5",cat:"custom",t:"Yin & Yang Birthday Cake"},
+ {id:"6",cat:"custom",t:"Chocolate Rosette Birthday Cake"},
+ {id:"7",cat:"custom",t:"Butterfly Celebration Cake"},
+ {id:"8",cat:"custom",t:"Yellow Rose & Butterfly Cake"},
+ {id:"9",cat:"custom",t:"Gentleman's Bow Tie Cake"},
+ {id:"10",cat:"custom",t:"Engagement Heart Cake"},
+ {id:"11",cat:"custom cupcakes",t:"Love Cake & Cupcake Set"},
+ {id:"12",cat:"custom",t:"Golden Stage Cake"},
+ {id:"13",cat:"custom",t:"Pink Blossom Birthday Cake"},
+ {id:"14",cat:"custom",t:"Character Celebration Cake"},
+ {id:"16",cat:"custom",t:"Rose Vine Birthday Cake"},
+ {id:"17",cat:"butter",t:"Cashew Cream Cake"},
+ {id:"18",cat:"custom",t:"Pink Kitty Character Cake"},
+ {id:"20",cat:"custom",t:"Heartbeat Celebration Cake"},
+ {id:"21",cat:"treats",t:"Heart Swiss Roll"},
+ {id:"22",cat:"treats",t:"Chocolate Malt Fudge Slab"},
+ {id:"23",cat:"custom",t:"Puppy & Kitten Birthday Cake"},
+ {id:"24",cat:"treats",t:"Chocolate Fudge Brownies"},
+ {id:"25",cat:"cupcakes",t:"Party Cupcake Tray"},
+ {id:"26",cat:"custom",t:"Cherry Cream Celebration Cake"},
+ {id:"27",cat:"butter",t:"Classic Chocolate Butter Cake"},
+ {id:"28",cat:"butter",t:"Pink & Green Marble Butter Cake"},
+ {id:"29",cat:"butter",t:"Zebra Marble Butter Cake"},
+ {id:"30",cat:"custom",t:"Caramel Drip Celebration Cake"},
+ {id:"31",cat:"butter",t:"Feathered Ribbon Cake"},
+ {id:"32",cat:"custom",t:"Yellow Daisy Garden Cake"},
+ {id:"33",cat:"cupcakes",t:"Pistachio Swirl Cupcake"},
+ {id:"34",cat:"custom",t:"Engagement Ring Pearl Cake"},
+ {id:"35",cat:"butter",t:"Homemade Coconut Cake"},
+ {id:"36",cat:"custom",t:"Strawberry & Cookie Drip Cake"},
+ {id:"37",cat:"custom cupcakes",t:"Green Velvet Cake & Cupcake Set"},
+ {id:"38",cat:"custom",t:"Bunny Character Cake"},
+ /* Added last, so they close the grid. These four are the newest shoot and the
+    only ones carrying the round seal, so they are also the most consistent. */
+ {id:"39",cat:"butter custom",t:"Butter Cake"},
+ {id:"40",cat:"custom",t:"Engagement Cake"},
+ {id:"41",cat:"butter custom",t:"Butter Cake with Butter Icing"},
+ {id:"42",cat:"custom",t:"Chocolate Cake with Ganache & Strawberries"}
+];
+var galEl=$("#gal"), shown=GALLERY.slice(), lbIdx=0;
+function renderGallery(f){
+  shown = (f==="all") ? GALLERY.slice() : GALLERY.filter(function(g){return g.cat.indexOf(f)>-1});
+  galEl.innerHTML = shown.map(function(g,i){
+    return '<button type="button" data-i="'+i+'" aria-label="'+g.t+', open larger photo">'
+      + '<img src="assets/gallery/thumb/'+g.id+'.jpg" alt="'+g.t+'" loading="lazy" width="640" height="640">'
+      + '<span class="cap">'+g.t+'</span></button>'}).join("");
+}
+renderGallery("all");
+var gcEl=$("#galCount"); if(gcEl)gcEl.textContent=GALLERY.length;   /* stays right if cakes are added */
+$$(".chip").forEach(function(c){c.addEventListener("click",function(){
+  $$(".chip").forEach(function(x){x.classList.remove("on")});
+  c.classList.add("on"); renderGallery(c.dataset.f)})});
+
+var lb=$("#lb"), lbI=$("#lbI"), lbC=$("#lbC"), lastFocus=null;
+/* one lightbox, two collections: the cakes and the paintings */
+var lbList=shown, lbBase="assets/gallery/";
+function openLb(i){lbIdx=(i+lbList.length)%lbList.length;var g=lbList[lbIdx];
+  lbI.src=lbBase+g.id+".jpg"; lbI.alt=g.t; lbC.textContent=g.t;
+  lb.hidden=false; document.body.style.overflow="hidden"; $("#lbX").focus()}
+function closeLb(){lb.hidden=true; document.body.style.overflow="";
+  if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+galEl.addEventListener("click",function(e){var b=e.target.closest("button[data-i]");
+  if(b){lastFocus=b; lbList=shown; lbBase="assets/gallery/"; openLb(+b.dataset.i)}});
+
+/* ---------------- Pixel Eye: the art studio ---------------- */
+/* Order is not alphabetical or chronological: it is the resting arrangement the
+   owner drew on a screenshot. The carousel opens at index 0, so what a visitor
+   first sees, left to right, is 4 2 1 3 5:
+     slot 1 centre        = index 0
+     slot 2 left of it    = index 7  (the last item wraps in from the left)
+     slot 3 right of it   = index 1
+     slot 4 far left      = index 6
+     slot 5 far right     = index 2
+   Indices 3 to 5 sit off screen until someone swipes. Changing the array length
+   changes which indices land in slots 2 and 4, so keep those two at the end. */
+var ART=[
+ {id:"1",t:"Garden portrait"},    /* slot 1, centre    */
+ {id:"8",t:"The birthday"},       /* slot 3            */
+ {id:"6",t:"Graduation"},         /* slot 5            */
+ {id:"4",t:"Flowers"},
+ {id:"5",t:"Floral top"},
+ {id:"7",t:"Cream and blue"},
+ {id:"2",t:"The red car"},        /* slot 4, far left  */
+ {id:"3",t:"Studio portrait"}     /* slot 2, left      */
+];
+(function(){
+  /* ---- the painting carousel ---- */
+  var car=$("#artCar"), stage=$("#carStage"), dots=$("#carDots"), live=$("#carLive");
+  if(stage){
+    var N=ART.length, idx=0, dragDX=0, dragging=false, startX=0, moved=false;
+
+    stage.innerHTML=ART.map(function(a,i){
+      return '<figure class="car-slide" data-i="'+i+'">'
+        +'<img src="assets/art/thumb/'+a.id+'.jpg" alt="'+a.t+', painted from a photograph" '
+        +'loading="lazy" width="800" height="1000" draggable="false">'
+        +'<span class="veil" aria-hidden="true"></span></figure>'}).join("");
+    dots.innerHTML=ART.map(function(a,i){
+      return '<button type="button" role="tab" data-d="'+i+'" aria-label="'+a.t+'"></button>'}).join("");
+    var slides=$$(".car-slide",stage), dotEls=$$("button",dots);
+    slides.forEach(function(s){s.veil=s.querySelector(".veil")});
+
+    function layout(){
+      var w=slides[0].offsetWidth||280;
+      slides.forEach(function(s,i){
+        var d=i-idx;
+        if(d> N/2)d-=N;            /* wrap, so it loops in both directions */
+        if(d<-N/2)d+=N;
+        var ad=Math.abs(d);
+        var dx=d*w*0.60+dragDX;
+        var sc=ad===0?1:(ad===1?0.84:0.72);
+        s.style.transform="translate(calc(-50% + "+dx.toFixed(1)+"px), -50%) scale("+sc+")";
+        /* The slide itself stays fully opaque and a dark veil sits over it instead.
+           Fading the slide made it translucent, so the painting behind showed
+           through the one in front, which looked like a printing fault. */
+        s.style.opacity=ad>2?"0":"1";
+        s.veil.style.opacity=ad===0?"0":(ad===1?"0.52":"0.76");
+        s.style.zIndex=String(10-ad);
+        s.style.pointerEvents=ad>2?"none":"auto";
+        s.classList.toggle("is-on",ad===0);
+      });
+      dotEls.forEach(function(b,i){
+        b.classList.toggle("on",i===idx);
+        b.setAttribute("aria-selected",i===idx?"true":"false");
+      });
+    }
+    function goTo(i,announce){
+      idx=((i%N)+N)%N; layout();
+      if(announce!==false&&live)live.textContent=ART[idx].t+", "+(idx+1)+" of "+N;
+    }
+    function step(n){goTo(idx+n)}
+
+    $("#carPrev").addEventListener("click",function(){step(-1)});
+    $("#carNext").addEventListener("click",function(){step(1)});
+    dots.addEventListener("click",function(e){
+      var b=e.target.closest("button[data-d]"); if(b)goTo(+b.dataset.d)});
+    car.addEventListener("keydown",function(e){
+      if(e.key==="ArrowLeft"){e.preventDefault();step(-1)}
+      else if(e.key==="ArrowRight"){e.preventDefault();step(1)}
+      else if(e.key==="Enter"||e.key===" "){e.preventDefault();openArt(idx)}
+    });
+
+    /* drag and swipe, the same code path for mouse and finger */
+    function down(e){
+      dragging=true;moved=false;startX=e.clientX;dragDX=0;
+      stage.classList.add("dragging");
+      slides.forEach(function(s){s.style.transition="none";s.veil.style.transition="none"});
+      if(stage.setPointerCapture&&e.pointerId!=null)
+        try{stage.setPointerCapture(e.pointerId)}catch(_){}
+    }
+    function move(e){
+      if(!dragging)return;
+      dragDX=e.clientX-startX;
+      if(Math.abs(dragDX)>6)moved=true;
+      layout();
+    }
+    function up(){
+      if(!dragging)return;
+      dragging=false; stage.classList.remove("dragging");
+      slides.forEach(function(s){s.style.transition="";s.veil.style.transition=""});
+      var w=slides[0].offsetWidth||280;
+      var jump=dragDX;
+      dragDX=0;
+      if(Math.abs(jump)>w*0.15) step(jump<0?1:-1); else layout();
+      /* A drag is followed by a native click, which the handler below swallows.
+         But a browser does not always fire one after a long drag, and a stuck
+         flag would eat the visitor's next real tap. The timer runs after any
+         click has already been dispatched, so it clears the flag either way. */
+      setTimeout(function(){moved=false},0);
+    }
+    stage.addEventListener("pointerdown",down);
+    stage.addEventListener("pointermove",move);
+    stage.addEventListener("pointerup",up);
+    stage.addEventListener("pointercancel",up);
+    stage.addEventListener("pointerleave",up);
+    stage.addEventListener("dragstart",function(e){e.preventDefault()});
+
+    function openArt(i){
+      lastFocus=slides[i]; lbList=ART; lbBase="assets/art/"; openLb(i);
+    }
+    stage.addEventListener("click",function(e){
+      if(moved){moved=false;return}          /* that was a swipe, not a tap */
+      var s=e.target.closest(".car-slide"); if(!s)return;
+      var i=+s.dataset.i;
+      if(i===idx)openArt(i); else goTo(i);
+    });
+
+    addEventListener("resize",function(){layout()});
+    goTo(0,false);
+  }
+
+  /* the before and after, wiped by scroll rather than dragged, so it speaks the
+     same language as the hero and stays the site's only click-to-play moment */
+  var fig=$("#reveal"), lastRv=-1;
+  function drawReveal(){
+    if(!fig)return;
+    var r=fig.getBoundingClientRect();
+    if(r.bottom<0||r.top>innerHeight*1.4)return;
+    var p=clamp((innerHeight - r.top - innerHeight*0.20)/(r.height*0.70),0,1);
+    if(Math.abs(p-lastRv)<0.005)return;
+    lastRv=p; fig.style.setProperty("--rv",p.toFixed(3));
+  }
+  addEventListener("scroll",drawReveal,{passive:true});
+  addEventListener("resize",drawReveal);
+  drawReveal();
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) fig.style.setProperty("--rv","1");
+
+  /* size picker, price follows the size */
+  var out=$("#priceVal"), lbl=$(".price-lbl");
+  $$(".size").forEach(function(b){
+    b.addEventListener("click",function(){
+      $$(".size").forEach(function(x){x.classList.remove("on");x.removeAttribute("aria-pressed")});
+      b.classList.add("on"); b.setAttribute("aria-pressed","true");
+      lbl.textContent=b.dataset.size;
+      out.textContent = b.dataset.price==="ask" ? "Price on request" : "Rs "+b.dataset.price;
+    });
+  });
+  /* the "order both" button fills the form in as a combined order */
+  var bothBtn=$("#bothOrder");
+  if(bothBtn) bothBtn.addEventListener("click",function(){
+    var ty=$("#f-type");
+    if(ty){
+      $$("#f-type option").forEach(function(o){
+        if(/painting together/.test(o.textContent)) ty.value=o.value||o.textContent });
+      ty.dispatchEvent(new Event("change",{bubbles:true}));
+    }
+    var d=$("#f-details");
+    if(d&&!d.value)d.value="A cake and an oil art portrait for the same day. ";
+  });
+
+  var go=$("#artOrder");
+  if(go) go.addEventListener("click",function(){
+    var sel=$(".size.on"); if(!sel)return;
+    var ty=$("#f-type");
+    if(ty) $$("#f-type option").forEach(function(o){
+      if(/Oil Art Portrait/.test(o.textContent)) ty.value=o.value||o.textContent });
+    var sz=$("#f-size"); if(sz&&!sz.value)sz.value=sel.dataset.size;
+    var d=$("#f-details");
+    if(d&&!d.value)d.value="Oil art portrait, "+sel.dataset.size
+      +". I will send the photograph on WhatsApp.";
+  });
+})();
+$("#lbX").addEventListener("click",closeLb);
+$("#lbP").addEventListener("click",function(){openLb(lbIdx-1)});
+$("#lbN").addEventListener("click",function(){openLb(lbIdx+1)});
+lb.addEventListener("click",function(e){if(e.target===lb)closeLb()});
+addEventListener("keydown",function(e){ if(lb.hidden)return;
+  if(e.key==="Escape")closeLb(); if(e.key==="ArrowLeft")openLb(lbIdx-1); if(e.key==="ArrowRight")openLb(lbIdx+1)});
+
+/* ---------------- the piping moment ---------------- */
+(function(){
+  var stage=$("#pipeStage"), nameEl=$("#pipeName"), input=$("#pipeInput"),
+      hold=$("#pipeHold"), done=$("#pipeDone"), nozzle=$("#nozzle"), go=$("#pipeGo");
+  $(".cake",stage).style.backgroundImage="url('"+ENDING+"')";
+  var p=0, holding=false, raf=null, last=0, complete=false;
+
+  function paint(){
+    stage.style.setProperty("--p",p.toFixed(4));
+    var r=nameEl.getBoundingClientRect(), s=stage.getBoundingClientRect();
+    nozzle.style.left=(r.left-s.left+r.width*p-4)+"px";
+    nozzle.style.top=(r.top-s.top-6)+"px";
+  }
+  function tick(now){
+    var dt=Math.min(64,now-(last||now)); last=now;
+    var speed=holding?0.00085:-0.0016;
+    p=clamp(p+speed*dt,0,1); paint();
+    if(p>=1&&!complete){complete=true;done.classList.add("on")}
+    if(p<1&&complete){complete=false;done.classList.remove("on")}
+    if((holding&&p<1)||(!holding&&p>0)){raf=requestAnimationFrame(tick)}
+    else{raf=null;last=0;stage.classList.toggle("piping",holding)}
+  }
+  function start(e){if(e&&e.cancelable)e.preventDefault();holding=true;stage.classList.add("piping");
+    if(raf===null)raf=requestAnimationFrame(tick)}
+  function stop(){holding=false;stage.classList.remove("piping");
+    if(raf===null&&p>0)raf=requestAnimationFrame(tick)}
+  ["mousedown","touchstart","pointerdown"].forEach(function(ev){hold.addEventListener(ev,start,{passive:false})});
+  ["mouseup","mouseleave","touchend","touchcancel","pointerup","pointercancel"].forEach(function(ev){
+    hold.addEventListener(ev,stop)});
+  addEventListener("blur",stop);
+  hold.addEventListener("keydown",function(e){if(e.key===" "||e.key==="Enter"){e.preventDefault();start()}});
+  hold.addEventListener("keyup",function(e){if(e.key===" "||e.key==="Enter"){stop()}});
+
+  input.addEventListener("input",function(){
+    var v=input.value.trim()||"Amma"; nameEl.textContent=v;
+    p=0;complete=false;done.classList.remove("on");paint()});
+  go.addEventListener("click",function(){
+    var v=input.value.trim(); if(!v)return;
+    var d=$("#f-details"); if(d&&!d.value)d.value='Please write "'+v+'" on the cake. ';
+  });
+  paint();
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){p=1;complete=true;done.classList.add("on");paint()}
+})();
+
+/* ---------------- the date calendar ----------------
+   Dates are built from local getFullYear/getMonth/getDate, never toISOString.
+   toISOString converts to UTC, and Sri Lanka is UTC+5:30, so local midnight is
+   18:30 the previous day in UTC: the earliest bookable date would land a day early. */
+(function(){
+  var input=$("#f-date"), cal=$("#cal"), grid=$("#calGrid"), title=$("#calTitle"),
+      navPrev=$("#calPrev"), navNext=$("#calNext");
+  var MONTHS=["January","February","March","April","May","June","July","August",
+              "September","October","November","December"];
+  var DAYFULL=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+
+  function day(d){return new Date(d.getFullYear(),d.getMonth(),d.getDate())}
+  function iso(d){var m=d.getMonth()+1,n=d.getDate();
+    return d.getFullYear()+"-"+(m<10?"0":"")+m+"-"+(n<10?"0":"")+n}
+  function parse(s){var p=s.split("-");return new Date(+p[0],+p[1]-1,+p[2])}
+  function short(d){return DAYFULL[(d.getDay()+6)%7].slice(0,3)+", "+d.getDate()+" "
+    +MONTHS[d.getMonth()].slice(0,3)+" "+d.getFullYear()}
+  function long(d){return DAYFULL[(d.getDay()+6)%7]+", "+d.getDate()+" "
+    +MONTHS[d.getMonth()]+" "+d.getFullYear()}
+
+  var today=day(new Date());
+  var MIN=day(new Date()); MIN.setDate(MIN.getDate()+MIN_DAYS);
+  var MAX=day(new Date()); MAX.setFullYear(MAX.getFullYear()+1);
+  var view=new Date(MIN.getFullYear(),MIN.getMonth(),1);
+  var selected=null, cursor=new Date(MIN);
+  input.dataset.min=iso(MIN);
+
+  function render(){
+    title.textContent=MONTHS[view.getMonth()]+" "+view.getFullYear();
+    navPrev.disabled=(view.getFullYear()===MIN.getFullYear()&&view.getMonth()===MIN.getMonth());
+    navNext.disabled=(view.getFullYear()===MAX.getFullYear()&&view.getMonth()===MAX.getMonth());
+    var first=new Date(view.getFullYear(),view.getMonth(),1);
+    var lead=(first.getDay()+6)%7;                                    /* week starts Monday */
+    var count=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    var out="";
+    for(var i=0;i<lead;i++) out+='<span class="pad"></span>';
+    for(var n=1;n<=count;n++){
+      var d=new Date(view.getFullYear(),view.getMonth(),n);
+      var off=(d<MIN||d>MAX), c=[];
+      if(+d===+today)c.push("today");
+      if(selected&&+d===+selected)c.push("on");
+      out+='<button type="button" data-d="'+iso(d)+'"'
+        +(off?' disabled':'')
+        +' tabindex="'+(+d===+cursor?"0":"-1")+'"'
+        +' aria-label="'+long(d)+(off?", too soon":"")+'"'
+        +(c.length?' class="'+c.join(" ")+'"':'')+'>'+n+'</button>';
+    }
+    grid.innerHTML=out;
+  }
+
+  function clearErr(){
+    var fld=input.closest(".field"); if(fld)fld.classList.remove("bad");
+    var e=$('[data-for="f-date"]'); if(e)e.textContent="";
+    input.removeAttribute("aria-invalid");
+  }
+  function pick(s){
+    selected=parse(s); cursor=new Date(selected);
+    input.value=short(selected); input.dataset.iso=s;
+    clearErr(); close(true);
+  }
+  /* A field near the bottom of a phone would open the whole calendar off screen.
+     So: flip it above the field when that side has more room, then, if it still
+     does not fit either way, nudge the page until the whole thing is visible. */
+  function place(){
+    cal.classList.remove("up");
+    cal.style.left="0px";
+    var pad=14, head=parseInt(getComputedStyle(document.documentElement)
+      .getPropertyValue("--header-h"),10)||70;
+    var ir=input.getBoundingClientRect(), ch=cal.offsetHeight;
+    var below=innerHeight-ir.bottom-pad, above=ir.top-head-pad;
+    if(below<ch && above>below) cal.classList.add("up");
+    /* keep it inside the screen sideways, without ever letting the page scroll across */
+    var hr=cal.getBoundingClientRect(), edge=10;
+    var overRight=hr.right-(innerWidth-edge);
+    if(overRight>0){
+      var shift=Math.min(overRight, hr.left-edge);   /* never push past the left edge */
+      if(shift>0) cal.style.left=(-shift)+"px";
+    }
+    requestAnimationFrame(function(){
+      var cr=cal.getBoundingClientRect();
+      var over=cr.bottom-(innerHeight-pad), under=(head+pad)-cr.top;
+      var smooth=!matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if(over>0) scrollBy({top:over,behavior:smooth?"smooth":"auto"});
+      else if(under>0) scrollBy({top:-under,behavior:smooth?"smooth":"auto"});
+    });
+  }
+
+  function open(){
+    if(cal.classList.contains("open"))return;
+    var base=selected||MIN;
+    view=new Date(base.getFullYear(),base.getMonth(),1);
+    cursor=new Date(base);
+    render();
+    place();
+    cal.classList.add("open");
+    input.setAttribute("aria-expanded","true");
+    document.addEventListener("pointerdown",outside,true);
+  }
+  function close(refocus){
+    if(!cal.classList.contains("open"))return;
+    cal.classList.remove("open");
+    input.setAttribute("aria-expanded","false");
+    document.removeEventListener("pointerdown",outside,true);
+    if(refocus)input.focus();
+  }
+  function outside(e){ if(!cal.contains(e.target)&&e.target!==input) close(false) }
+
+  input.addEventListener("click",function(){
+    cal.classList.contains("open")?close(false):open() });
+  input.addEventListener("keydown",function(e){
+    if(e.key==="Enter"||e.key===" "||e.key==="ArrowDown"){
+      e.preventDefault(); open();
+      var f=grid.querySelector('button[tabindex="0"]:not(:disabled)')
+           ||grid.querySelector("button:not(:disabled)");
+      if(f)f.focus();
+    }
+  });
+  navPrev.addEventListener("click",function(){view.setMonth(view.getMonth()-1);render()});
+  navNext.addEventListener("click",function(){view.setMonth(view.getMonth()+1);render()});
+  grid.addEventListener("click",function(e){
+    var b=e.target.closest("button[data-d]");
+    if(b&&!b.disabled)pick(b.dataset.d);
+  });
+  cal.addEventListener("keydown",function(e){
+    if(e.key==="Escape"){e.preventDefault();close(true);return}
+    var b=e.target.closest("button[data-d]"); if(!b)return;
+    var step=0, cur=parse(b.dataset.d);
+    if(e.key==="ArrowRight")step=1; else if(e.key==="ArrowLeft")step=-1;
+    else if(e.key==="ArrowDown")step=7; else if(e.key==="ArrowUp")step=-7;
+    else if(e.key==="PageDown")step=null; else if(e.key==="PageUp")step=null;
+    else if(e.key==="Home")step=-((cur.getDay()+6)%7);
+    else if(e.key==="End")step=6-((cur.getDay()+6)%7);
+    else return;
+    e.preventDefault();
+    var next=new Date(cur);
+    if(step===null){ next.setMonth(next.getMonth()+(e.key==="PageDown"?1:-1)) }
+    else { next.setDate(next.getDate()+step) }
+    if(next<MIN)next=new Date(MIN);
+    if(next>MAX)next=new Date(MAX);
+    cursor=next;
+    view=new Date(next.getFullYear(),next.getMonth(),1);
+    render();
+    var t=grid.querySelector('button[data-d="'+iso(next)+'"]');
+    if(t)t.focus();
+  });
+  render();
+})();
+
+/* ---------------- order form ---------------- */
+(function(){
+  var f=$("#orderForm"), dateEl=$("#f-date");
+  $$("[data-pick]").forEach(function(a){a.addEventListener("click",function(){
+    var s=$("#f-type"); var want=a.dataset.pick.replace("&amp;","&");
+    $$("#f-type option").forEach(function(o){if(o.textContent.trim()===want)s.value=o.value||o.textContent})})});
+
+  /* A painting is not a cake, so the cake-only fields step aside when one is
+     chosen. Flavour disappears and stops being required; "servings" becomes
+     "size"; the notice line changes to the painting's own turnaround. */
+  var REQ=["f-name","f-phone","f-type","f-date","f-size","f-flavour","f-service","f-details"];
+  /* three shapes of order, not two: cake only, painting only, or both. A
+     combined order still needs a flavour, so it behaves like a cake order with
+     its own longer notice period. */
+  var orderKind=function(){
+    var v=$("#f-type").value;
+    if(/painting together/.test(v)) return "both";
+    if(/Oil Art Portrait/.test(v))  return "art";
+    return "cake";
+  };
+  var isArt=function(){return orderKind()==="art"};
+  (function(){
+    var ty=$("#f-type"), flav=$("#f-flavour").closest(".field"),
+        sizeLbl=$('label[for="f-size"]'), sizeIn=$("#f-size"),
+        dateHint=$("#f-date").closest(".field").querySelector(".hint");
+    var MODE={
+      cake:{lbl:"Servings or cake size",ph:"1 kg, or about 15 people",
+            hint:"Three days from today at the earliest."},
+      art: {lbl:"Size",ph:"12 x 15 inches",
+            hint:"Paintings take three to five days, so allow a little longer."},
+      both:{lbl:"Cake size, and painting size",ph:"1 kg cake, 12 x 15 painting",
+            hint:"Allow about a week, because the painting takes the longer of the two."}
+    };
+    function sync(){
+      var k=orderKind(), s=MODE[k];
+      flav.hidden=(k==="art");
+      sizeLbl.childNodes[0].nodeValue=s.lbl+" ";
+      sizeIn.placeholder=s.ph;
+      if(dateHint)dateHint.textContent=s.hint;
+      if(k==="art"){var e=$('[data-for="f-flavour"]');if(e)e.textContent="";
+        flav.classList.remove("bad")}
+    }
+    ty.addEventListener("change",sync);
+    sync();
+  })();
+  function setErr(id,msg){
+    var el=$("#"+id), fld=el.closest(".field"), e=$('[data-for="'+id+'"]');
+    fld.classList.toggle("bad",!!msg); if(e)e.textContent=msg||"";
+    if(msg)el.setAttribute("aria-invalid","true"); else el.removeAttribute("aria-invalid");
+  }
+  f.addEventListener("submit",function(ev){
+    ev.preventDefault(); var bad=null;
+    REQ.forEach(function(id){
+      if(id==="f-flavour"&&isArt()){setErr(id,"");return}   /* paintings have no flavour */
+      var el=$("#"+id), v=(el.value||"").trim();
+      if(!v){setErr(id,"This one is needed."); if(!bad)bad=el; return}
+      if(id==="f-phone"&&v.replace(/\D/g,"").length<9){setErr(id,"That number looks too short."); if(!bad)bad=el; return}
+      if(id==="f-date"&&(!el.dataset.iso||el.dataset.iso<el.dataset.min)){
+        setErr(id,"Please pick a date at least three days away."); if(!bad)bad=el; return}
+      setErr(id,"");
+    });
+    if(bad){bad.focus();bad.scrollIntoView({block:"center",behavior:"smooth"});return}
+
+    var g=function(id){return $("#"+id).value.trim()};
+    var kind=orderKind(), art=kind==="art", both=kind==="both";
+    var opener = art  ? "Hello The Bakekeep! I would like to order an oil art portrait."
+               : both ? "Hello The Bakekeep! I would like to order a cake and a painting together."
+                      : "Hello The Bakekeep! I would like to order a cake.";
+    var lines=[opener,"",
+      "Name: "+g("f-name"),"Contact: "+g("f-phone"),
+      (art||both?"Order: ":"Cake type: ")+g("f-type"),
+      "Date needed: "+g("f-date"),
+      (art?"Size: ":both?"Sizes: ":"Size or servings: ")+g("f-size")];
+    if(!art)lines.push("Flavour: "+g("f-flavour"));
+    lines.push("Pickup or delivery: "+g("f-service"));
+    if(g("f-town"))lines.push("Town: "+g("f-town"));
+    lines.push("",art?"About the portrait:":both?"The cake, and the painting:":"Design idea:",
+      g("f-details"));
+    if(art||both)lines.push("","(I will send the photograph for the painting here.)");
+    var url="https://wa.me/"+WA+"?text="+encodeURIComponent(lines.join("\n"));
+    window.open(url,"_blank","noopener");
+    f.innerHTML='<div class="sent"><h3>Your message is ready.</h3>'
+      +'<p>WhatsApp should be opening now. If it did not, <a href="'+url+'" target="_blank" rel="noopener">tap here to open it</a>.</p></div>';
+  });
+})();
+
+/* ---------------- entrances + drawn lines ---------------- */
+(function(){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(!e.isIntersecting)return;
+      var el=e.target; el.classList.add("in"); io.unobserve(el);
+      if(el.classList.contains("stagger")){setTimeout(function(){el.classList.add("done")},1400)}
+    })},{rootMargin:"0px 0px -12% 0px",threshold:.12});
+  $$(".rise,.stagger,.steps,.divider,.more").forEach(function(el){io.observe(el)});
+})();
+
+/* ---------------- pause while the tab is hidden ---------------- */
+function syncPaused(){document.body.classList.toggle("paused",document.hidden)}
+addEventListener("visibilitychange",syncPaused);
+syncPaused();   /* a page that opens in a background tab starts paused too */
+
+/* ==================================================================
+   THE SCRUB HERO
+   ================================================================== */
+var hero=$("#hero"), stage=$("#stage"), video=$("#vid"), poster=$("#poster"),
+    ring=$("#ring"), shot=$("#shot");
+var bands=$$(".band").map(function(el){
+  return {el:el, a:+el.dataset.a, b:+el.dataset.b,
+          ramp:el.dataset.ramp?+el.dataset.ramp:0,
+          spread:el.dataset.spread?+el.dataset.spread:0,
+          op:-1, k:-1};
+});
+
+/* split text once, seeded so it is identical on every load */
+bands.forEach(function(bd,bi){
+  var h=$("[data-split]",bd.el); if(!h)return;
+  var mode=h.dataset.split, text=h.textContent, emIdx=h.dataset.em?+h.dataset.em:-1;
+  var r=rng(9137+bi*77);
+  var words=text.split(" ");
+  var total=text.replace(/ /g,"").length, ci=0;
+  var html='<span class="sr">'+text+'</span><span aria-hidden="true">';
+  words.forEach(function(w,wi){
+    var em=(wi===emIdx)?" em":"";
+    var th;
+    if(mode==="word"){ th=(wi/Math.max(1,words.length))*0.5 }
+    else{ th=0 }
+    html+='<span class="w'+em+'" style="--th:'+th.toFixed(3)+'">';
+    if(mode==="char"){
+      for(var i=0;i<w.length;i++){
+        var t2=(bd.spread?(ci/Math.max(1,total))*bd.spread:0)+r()*0.06;
+        var jx=(r()*2-1)*26, jy=(r()*2-1)*22, jr=(r()*2-1)*16;
+        html+='<span class="c" style="--th:'+t2.toFixed(3)+';--jx:'+jx.toFixed(1)+'px;--jy:'+jy.toFixed(1)+'px;--jr:'+jr.toFixed(1)+'deg">'+w[i]+'</span>';
+        ci++;
+      }
+    } else { html+=w }
+    html+='</span>'+(wi<words.length-1?'<span class="w"> </span>':'');
+  });
+  h.innerHTML=html+'</span>';
+});
+
+function heroProgress(){
+  var r=hero.getBoundingClientRect();
+  var range=hero.offsetHeight-innerHeight;
+  if(range<=0)return 0;
+  return clamp(-r.top/range,0,1);
+}
+
+/* --- seek gating --- */
+var seekBusy=false, pendingTime=null;
+function requestSeek(t){
+  if(!video.duration||isNaN(video.duration))return;
+  if(seekBusy){pendingTime=t;return}
+  seekBusy=true; try{video.currentTime=t}catch(e){seekBusy=false}
+}
+video.addEventListener("seeked",function(){
+  seekBusy=false;
+  if(pendingTime!==null){var t=pendingTime;pendingTime=null;requestSeek(t)}
+});
+video.addEventListener("error",function(){seekBusy=false;pendingTime=null;failVideo()});
+
+/* --- the drive loop --- */
+var target=0, shownP=0, rafId=null, lastTick=0, heroOn=true;
+var loadK=0, loadStart=0;
+function tick(now){
+  var dt=Math.min(100,now-(lastTick||now)); lastTick=now;
+  var k=0.16;
+  shownP += (target-shownP)*(1-Math.pow(1-k,dt/16.667));
+  var settled = Math.abs(target-shownP)<0.0005;
+  if(settled){shownP=target}
+  if(loadStart&&loadK<1){loadK=clamp((now-loadStart)/900,0,1)}
+  requestSeek(shownP*(video.duration||0));
+  updateCaptions(shownP);
+  if(settled && loadK>=1){rafId=null;lastTick=0}
+  else{rafId=requestAnimationFrame(tick)}
+}
+function onScroll(){
+  target=heroProgress();
+  if(rafId===null&&heroOn)rafId=requestAnimationFrame(tick);
+}
+
+function updateCaptions(p){
+  for(var i=0;i<bands.length;i++){
+    var bd=bands[i], a=bd.a, b=bd.b;
+    var f=Math.min(0.02,(b-a)/3);
+    var inRamp = (i===0)?1:smoothstep(p,a,a+f);
+    var outRamp = (i===bands.length-1)?1:(1-smoothstep(p,b-f,b));
+    var op=inRamp*outRamp;
+    var kk=clamp((p-a)/(bd.ramp||Math.min(0.025,(b-a)*0.35)),0,1);
+    if(i===0)kk=Math.max(kk,loadK);
+    if(Math.abs(op-bd.op)>0.004){bd.op=op;bd.el.style.opacity=op.toFixed(3)}
+    if(Math.abs(kk-bd.k)>0.008){bd.k=kk;bd.el.style.setProperty("--k",kk.toFixed(3))}
+  }
+}
+
+/* --- the streamed blob loader --- */
+var started=false;
+function startBlobFetch(){ if(started)return; started=true; loadHeroBlob().catch(failVideo) }
+function initHeroOnce(){
+  if(initHeroOnce.done)return; initHeroOnce.done=true;
+  poster.style.backgroundImage="url('"+POSTER+"')";
+  var img=new Image();
+  img.onload=startBlobFetch; img.onerror=startBlobFetch; img.src=POSTER;
+  setTimeout(startBlobFetch,4000);
+  loadStart=performance.now();
+}
+async function loadHeroBlob(){
+  var ctrl=new AbortController();
+  var watchdog=setTimeout(function(){ctrl.abort()},20000);
+  var res=await fetch(VIDEO_URL,{signal:ctrl.signal});
+  if(!res.ok||!res.body)throw new Error("bad response");
+  var total=Number(res.headers.get("Content-Length"))||VIDEO_BYTES;
+  var reader=res.body.getReader(), chunks=[], got=0, lastRing=0;
+  for(;;){
+    var r=await reader.read();
+    if(r.done)break;
+    clearTimeout(watchdog);
+    watchdog=setTimeout(function(){ctrl.abort()},20000);
+    chunks.push(r.value); got+=r.value.length;
+    var frac=Math.min(1,got/total), now=performance.now();
+    if(now-lastRing>100||frac===1){lastRing=now;
+      ring.style.setProperty("--ld",Math.round(126*(1-frac)))}
+  }
+  clearTimeout(watchdog);
+  ring.style.setProperty("--ld",0);
+  video.src=URL.createObjectURL(new Blob(chunks,{type:"video/mp4"}));
+  video.load();
+  video.addEventListener("canplay",function(){
+    requestSeek(heroProgress()*video.duration);
+    stage.classList.add("video-ready");
+  },{once:true});
+}
+function failVideo(){
+  if(failVideo.done)return; failVideo.done=true;
+  if(ring&&ring.parentNode){var c=document.createElement("p");c.className="chev";
+    c.textContent="Scroll";ring.replaceWith(c)}
+  stage.classList.add("video-failed");
+}
+
+/* --- the five gates, live in both directions --- */
+var GATES=[
+  "(max-width: 720px)",
+  "(orientation: portrait) and (max-width: 1024px)",
+  "(orientation: portrait) and (pointer: coarse)",
+  "(orientation: landscape) and (pointer: coarse) and (max-height: 560px)",
+  "(prefers-reduced-motion: reduce)"
+];
+var scrubOn=false;
+function enableScrub(){
+  if(scrubOn)return; scrubOn=true;
+  initHeroOnce();
+  addEventListener("scroll",onScroll,{passive:true});
+  bands.forEach(function(b){b.op=-1;b.k=-1});
+  unpinFinalStates();
+  updateCaptions(heroProgress());
+  onScroll();
+}
+function disableScrub(){
+  if(!scrubOn)return; scrubOn=false;
+  removeEventListener("scroll",onScroll);
+  if(rafId!==null){cancelAnimationFrame(rafId);rafId=null}
+}
+function applyHeroMode(){
+  var gated=GATES.some(function(q){return matchMedia(q).matches});
+  if(gated)disableScrub(); else enableScrub();
+}
+var MQLS=GATES.map(function(q){return matchMedia(q)});
+MQLS.forEach(function(m){m.addEventListener("change",applyHeroMode)});
+
+/* the static hero image is set regardless, it is CSS that decides who sees it */
+shot.style.backgroundImage="url('"+ENDING+"')";
+
+/* reduced motion, live, in both directions */
+function pinToFinalStates(){
+  document.body.classList.add("pinned");
+  $$(".rise,.stagger,.steps,.divider,.more").forEach(function(el){el.classList.add("in")});
+  $$(".stagger").forEach(function(el){el.classList.add("done")});
+  var ps=$("#pipeStage"); if(ps){ps.style.setProperty("--p","1");$("#pipeDone").classList.add("on")}
+}
+function unpinFinalStates(){ document.body.classList.remove("pinned") }
+matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change",function(e){
+  if(e.matches)pinToFinalStates(); else applyHeroMode();
+});
+
+/* hero visibility, so the loop never runs off-screen */
+if("IntersectionObserver" in window){
+  new IntersectionObserver(function(es){
+    heroOn=es[0].isIntersecting;
+    if(heroOn&&scrubOn&&rafId===null)rafId=requestAnimationFrame(tick);
+  },{threshold:0}).observe(hero);
+}
+
+applyHeroMode();
+if(matchMedia("(prefers-reduced-motion: reduce)").matches)pinToFinalStates();
+
+})();
+</script>
+</body>
+</html>
