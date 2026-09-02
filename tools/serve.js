@@ -18,4 +18,12 @@ http.createServer((req, res) => {
     });
     fs.createReadStream(file).pipe(res);
   });
-}).listen(PORT, '127.0.0.1', () => console.log('serving ' + ROOT + ' on http://127.0.0.1:' + PORT));
+}).listen(PORT, '0.0.0.0', () => {
+  // 0.0.0.0 so a phone on the same wifi can reach it, not just this Mac
+  const nets = require('os').networkInterfaces();
+  const lan = Object.values(nets).flat()
+    .filter(n => n && n.family === 'IPv4' && !n.internal).map(n => n.address);
+  console.log('serving ' + ROOT);
+  console.log('  on this Mac : http://localhost:' + PORT);
+  lan.forEach(a => console.log('  on your phone: http://' + a + ':' + PORT));
+});

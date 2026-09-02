@@ -82,6 +82,39 @@ Band 4 converges to center over the full-bleed ending.
 
 Validated later by the flick test. Ranges move if the test says so.
 
+## 4b. The mobile decision, reversed
+
+The first build shipped the static hero on phones and portrait tablets, which is the safe
+default. The owner watched it on a real phone, read it as a fault rather than a choice, and
+asked for the scroll film there too. It was reversed, and the three conditions the reversal
+needs all hold: the encoded film is 1.6MB, well under the 8MB ceiling; the composition does
+survive the portrait crop once the crop is pinned; and the owner verifies on their own phone.
+
+Two gates remain, and both are about impossibility rather than weight: a phone held sideways
+has no vertical room for the journey, and reduced motion must never load or move the video.
+
+What the reversal needed beyond deleting three media queries:
+
+- **The crop had to be pinned.** Cover on a tall screen shows the full height and crops the
+  width to roughly a quarter of the frame. Centred, that quarter is the dark right side of
+  the kitchen and the cake never appears. `object-position: 30% 50%` puts the cake and the
+  falling ganache in the visible slice.
+- **The captions moved to the top.** They sit right of centre in landscape, where the frame
+  is quiet. In portrait the cake sits low and the quiet part is above it, so the bands become
+  full width, centred, and top aligned, with the band scrim reshaped to cover only that
+  upper zone.
+- **The hero grew to 720vh in portrait.** A phone flick covers far more of the screen than a
+  desktop one, so the desktop 560vh gave each beat only two readable swipes. At 720vh each
+  beat holds for three to seven swipes at a 250px flick, and nothing is skippable at 600px.
+
+Measured on a phone: worst-pixel contrast under the captions runs 9.66:1 to 12.30:1, well
+clear of the 3.5 floor and better than the desktop numbers, because the upper part of the
+frame is darker than the velvet the desktop captions sit on.
+
+The honest cost, stated to the owner rather than hidden: the hero is now about seven screens
+of scrolling on a phone before the first section, and phones now download the 1.6MB film that
+they previously never fetched.
+
 ## 5. The static-hero copy block
 
 For phones, portrait tablets and reduced motion, composed over the ending frame:

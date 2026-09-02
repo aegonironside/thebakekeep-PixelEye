@@ -823,11 +823,36 @@ footer .flegal{margin-top:16px;font-size:12.5px;color:var(--text-secondary);opac
 }
 @media (max-height:560px){.ring,.chev{display:none}}
 
-/* ---------- THE FIVE STATIC-HERO GATES (must match the JS list exactly) ---------- */
-@media (max-width:720px),
-       (orientation:portrait) and (max-width:1024px),
-       (orientation:portrait) and (pointer:coarse),
-       (orientation:landscape) and (pointer:coarse) and (max-height:560px),
+/* ---------- the scrub hero in portrait ----------
+   Cover on a tall screen shows the whole height and crops the width to roughly a
+   quarter of the frame. Centred, that quarter is the dark right side of the
+   kitchen and the cake never appears at all, so the crop is pinned to the cake.
+   The captions move to the top, because in portrait the cake sits low and the
+   quiet part of the picture is above it. */
+@media (orientation:portrait){
+  .hero{height:720vh}
+  .stage video{object-position:30% 50%}
+  .stage .poster{background-position:30% 50%}
+  .scrim{background:linear-gradient(180deg,rgba(8,6,8,.80) 0%,rgba(8,6,8,.34) 34%,
+    rgba(8,6,8,.20) 62%,rgba(8,6,8,.58) 100%)}
+  .band{width:100%;align-items:center;text-align:center;justify-content:flex-start;
+    padding:calc(var(--header-h) + 6.5vh) 20px 0}
+  .band h2{font-size:clamp(29px,7.4vw,46px);max-width:13ch}
+  .band .sub{max-width:30ch;font-size:15.5px;margin-top:14px}
+  .band .cta-row{justify-content:center;margin-top:22px}
+  .band::before{inset:-3% -8% auto -8%;height:58%;
+    background:radial-gradient(ellipse 96% 84% at 50% 32%,rgba(5,4,6,.88) 0%,
+      rgba(5,4,6,.74) 42%,rgba(5,4,6,.32) 70%,rgba(5,4,6,0) 88%)}
+  .ring{bottom:calc(14vh)}
+}
+
+/* ---------- THE STATIC-HERO GATES (must match the JS list exactly) ----------
+   Phones and portrait tablets used to sit here too, and got the still hero. The
+   owner watched it on a real phone and wanted the scroll film there as well, so
+   they were taken out. Two gates remain, and both are about it being impossible
+   rather than merely heavy: a phone held sideways has no vertical room for the
+   journey at all, and reduced motion must never load or move the video. */
+@media (orientation:landscape) and (pointer:coarse) and (max-height:560px),
        (prefers-reduced-motion:reduce){
   .hero{height:auto}
   .stage{position:relative;height:auto;overflow:visible}
@@ -2125,9 +2150,6 @@ function failVideo(){
 
 /* --- the five gates, live in both directions --- */
 var GATES=[
-  "(max-width: 720px)",
-  "(orientation: portrait) and (max-width: 1024px)",
-  "(orientation: portrait) and (pointer: coarse)",
   "(orientation: landscape) and (pointer: coarse) and (max-height: 560px)",
   "(prefers-reduced-motion: reduce)"
 ];

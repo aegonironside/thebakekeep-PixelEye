@@ -22,9 +22,7 @@ const CASES = [
     await c.goto('http://127.0.0.1:4173/');
     await new Promise(r => setTimeout(r, 2200));
     const r = await c.evalJS(`(()=>{
-      const GATES=["(max-width: 720px)","(orientation: portrait) and (max-width: 1024px)",
-        "(orientation: portrait) and (pointer: coarse)",
-        "(orientation: landscape) and (pointer: coarse) and (max-height: 560px)",
+      const GATES=["(orientation: landscape) and (pointer: coarse) and (max-height: 560px)",
         "(prefers-reduced-motion: reduce)"];
       const gated=GATES.some(q=>matchMedia(q).matches);
       const st=document.querySelector('#stage');
